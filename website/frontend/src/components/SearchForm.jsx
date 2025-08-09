@@ -17,13 +17,14 @@ export default function SearchForm({ initialQuery = '', initialMaxResults = 5, s
   const onSubmit = (e) => {
     e.preventDefault()
     if (!query.trim()) return
-    const params = new URLSearchParams({ q: query, k: String(maxResults) })
+    const clamped = Math.min(Math.max(1, Number(maxResults) || Number(initialMaxResults) || 5), 50)
+    const params = new URLSearchParams({ q: query, k: String(clamped) })
     navigate(`/results?${params.toString()}`)
   }
 
   return (
     <div className="space-y-4">
-      <form onSubmit={onSubmit} className="space-y-3">
+      <form noValidate onSubmit={onSubmit} className="space-y-3">
         <textarea
           className="textarea textarea-bordered textarea-lg w-full"
           rows={3}
@@ -36,7 +37,8 @@ export default function SearchForm({ initialQuery = '', initialMaxResults = 5, s
           <input
             type="number"
             min={1}
-            max={20}
+            max={50}
+            step={1}
             value={maxResults}
             onChange={(e) => setMaxResults(Number(e.target.value))}
             className="input input-bordered input-md w-24"
