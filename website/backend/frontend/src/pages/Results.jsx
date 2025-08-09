@@ -38,8 +38,8 @@ export default function Results() {
     <div className="space-y-6">
       <SearchForm initialQuery={q} initialMaxResults={k} showExamples={false} />
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">Results</h2>
-        <Link to="/" className="text-sm text-blue-600 hover:underline">New search</Link>
+        <h2 className="text-lg font-semibold">You are gonna love these!</h2>
+        <Link to="/" className="btn btn-sm btn-outline">New search</Link>
       </div>
       {loading && <LoadingSpinner />}
       {error && <div className="rounded border border-red-200 bg-red-50 p-3 text-sm text-red-800">{error}</div>}
@@ -48,6 +48,13 @@ export default function Results() {
       )}
       {!loading && !error && data && data.events?.length > 0 && (
         <div className="grid gap-4">
+          {data.rationale && (
+            <div className="card bg-base-100 card-border border-base-300">
+              <div className="card-body p-4 text-sm">
+                <p>{data.rationale}</p>
+              </div>
+            </div>
+          )}
           {data.events.map((ev) => (
             <EventCard key={ev.id} event={ev} />
           ))}

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 import time
-from typing import List, Optional, Sequence
+from typing import List, Optional, Sequence, Tuple, Any
 
 import httpx
 
@@ -39,16 +39,18 @@ class RerankService:
         self,
         query: str,
         candidates: Sequence[dict],
-    ) -> List[str]:
-        """Return a list of candidate IDs in the preferred order.
+    ) -> Tuple[List[str], Optional[str]]:
+        """Return a tuple: (ordered candidate IDs, optional 2-sentence rationale).
 
         Each candidate must be a dict with keys: id, title, type, camp, description.
         """
         system_msg = (
             "You are a helpful assistant that re-ranks event candidates. "
-            "Given a user query and a list of events, produce a JSON array "
-            "containing only the event ids sorted from best to worst match. "
-            "Do not include explanations. Respond with JSON only."
+            "Given a user query and a list of events, respond with a compact JSON object with two fields: "
+            '"order": an array of event ids sorted from best to worst match, and '
+            '"rationale": a fun, playful, upbeat explanation (max 2 sentences) describing why the selected events match the query. '
+            "Keep it concise and friendly; you may include at most one fitting emoji. "
+            "Respond with JSON only, no extra commentary."
         )
 
         # Keep prompt compact by truncating description
@@ -98,11 +100,21 @@ class RerankService:
                 content = (
                     payload["choices"][0]["message"]["content"].strip()  # type: ignore[index]
                 )
-                # Expect a JSON array of ids
-                order = json.loads(content)
-                if isinstance(order, list) and all(isinstance(x, str) for x in order):
-                    return order  # type: ignore[return-value]
-                # If not a list of strings, fall through to retry once
+                # Expect either an object { order: [...], rationale: "..." } or legacy array
+                parsed: Any = json.loads(content)
+                if isinstance(parsed, list) and all(isinstance(x, str) for x in parsed):
+                    return parsed, None
+                if (
+                    isinstance(parsed, dict)
+                    and isinstance(parsed.get("order"), list)
+                    and all(isinstance(x, str) for x in parsed["order"])  # type: ignore[index]
+                ):
+                    rationale_val = parsed.get("rationale")
+                    rationale_str: Optional[str] = (
+                        str(rationale_val).strip() if isinstance(rationale_val, str) else None
+                    )
+                    return parsed["order"], rationale_str  # type: ignore[return-value]
+                # If not valid, fall through to retry once
                 last_error = ValueError("Invalid re-rank response structure")
             except Exception as exc:
                 last_error = exc
@@ -111,6 +123,6 @@ class RerankService:
 
         if last_error is not None:
             raise last_error
-        return []
+        return [], None
 
 

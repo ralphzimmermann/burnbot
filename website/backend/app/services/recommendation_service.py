@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Tuple, Optional, Tuple
 
 import faiss
 import numpy as np
@@ -72,9 +72,9 @@ class RecommendationService:
             result.append((int(idx), float(score)))
         return result
 
-    def get_recommendations(self, query: str, max_results: int = 5) -> List[Event]:
+    def get_recommendations(self, query: str, max_results: int = 5) -> Tuple[List[Event], Optional[str]]:
         if not query or not query.strip():
-            return []
+            return [], None
 
         vector = self.embedding_service.generate_text_embedding(query)
         query_vec = np.asarray(vector, dtype=np.float32)
@@ -95,7 +95,7 @@ class RecommendationService:
 
         if self.rerank_enabled and candidates:
             try:
-                order = self.rerank_service.rerank(
+                order, rationale_text = self.rerank_service.rerank(
                     query,
                     [
                         {
@@ -110,11 +110,11 @@ class RecommendationService:
                 )
                 id_to_event = {e.id: e for e in candidates}
                 reranked = [id_to_event[i] for i in order if i in id_to_event]
-                return reranked[: max_results]
+                return reranked[: max_results], rationale_text
             except Exception:
                 # On failure, fall back to vector order
-                pass
+                return candidates[: max_results], None
 
-        return candidates[: max_results]
+        return candidates[: max_results], None
 
 

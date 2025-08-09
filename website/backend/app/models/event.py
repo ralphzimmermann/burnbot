@@ -39,5 +39,6 @@ class RecommendationResponse(BaseModel):
     events: List[Event]
     query: str
     processing_time_ms: float
+    rationale: Optional[str] = None
 
 

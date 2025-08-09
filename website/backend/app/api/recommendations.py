@@ -18,13 +18,20 @@ def post_recommend(request: RecommendationRequest) -> RecommendationResponse:
 
     start = time.time()
     try:
-        events = service.get_recommendations(request.query, request.max_results)
+        # Primary recommendations and optional rationale
+        events, rationale_text = service.get_recommendations(request.query, request.max_results)
+        rationale: str | None = None
+        if rationale_text:
+            sentences = [s.strip() for s in rationale_text.replace("\n", " ").split(".") if s.strip()]
+            rationale = ". ".join(sentences[:2])
+            if rationale and not rationale.endswith("."):
+                rationale += "."
     except Exception as exc:
         # For Phase 4, return a generic 503 and a helpful message
         raise HTTPException(status_code=503, detail="Recommendation service unavailable") from exc
 
     elapsed_ms = (time.time() - start) * 1000.0
-    return RecommendationResponse(events=events, query=request.query, processing_time_ms=elapsed_ms)
+    return RecommendationResponse(events=events, query=request.query, processing_time_ms=elapsed_ms, rationale=rationale)
 
 
 @router.get("/events/{event_id}")
