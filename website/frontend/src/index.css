@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
-@plugin "daisyui/theme";
+
 
 @plugin "daisyui/theme" {
   name: "caramellatte";
