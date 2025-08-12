@@ -77,7 +77,7 @@ class RerankService:
                 ),
             },
         ]
-        print(f"Messages: {messages}")
+        #print(f"Messages: {messages}")
 
         backoff = self.initial_backoff_s
         last_error: Optional[Exception] = None

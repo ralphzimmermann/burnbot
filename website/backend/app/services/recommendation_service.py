@@ -74,7 +74,7 @@ class RecommendationService:
             result.append((int(idx), float(score)))
         return result
 
-    def get_recommendations(self, query: str, max_results: int = 5) -> Tuple[List[Event], Optional[str]]:
+    def get_recommendations(self, query: str, max_results: int = 30) -> Tuple[List[Event], Optional[str]]:
         if not query or not query.strip():
             return [], None
 
@@ -92,7 +92,7 @@ class RecommendationService:
             if ev.id not in seen:
                 candidates.append(ev)
                 seen.add(ev.id)
-                print(f"Added: {ev}")
+                #print(f"Added: {ev}")
             if len(candidates) >= initial_k:
                 break
 

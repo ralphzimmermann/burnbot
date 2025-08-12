@@ -12,7 +12,7 @@ Embeddings are L2-normalized for cosine similarity and indexed with FAISS `Index
   Request:
 
   - `query`: string
-  - `max_results`: number (default 5)
+  - `max_results`: number (default 30)
 
   Response:
 

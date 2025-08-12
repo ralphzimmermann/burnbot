@@ -1,8 +1,9 @@
 import axios from 'axios'
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000'
+// Default to same-origin in production; override via VITE_API_BASE_URL for dev
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || ''
 
-export async function recommend(query, maxResults = 5) {
+export async function recommend(query, maxResults = 30) {
   const { data } = await axios.post(`${BASE_URL}/recommend`, {
     query,
     max_results: maxResults,

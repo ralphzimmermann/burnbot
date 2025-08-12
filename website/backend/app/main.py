@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
+from pathlib import Path
+from fastapi.responses import FileResponse
+from starlette.staticfiles import StaticFiles
 
 from app.api.recommendations import router as recommendations_router
 
@@ -37,6 +40,31 @@ def create_app() -> FastAPI:
         return {"message": "Hello World"}
 
     app.include_router(recommendations_router)
+
+    # --- Frontend static files (Vite build) ---
+    # Serve the built frontend from `website/frontend/dist`
+    base_dir = Path(__file__).resolve().parents[2]  # website/
+    frontend_dist = base_dir / "frontend" / "dist"
+    index_html = frontend_dist / "index.html"
+
+    if frontend_dist.exists() and index_html.exists():
+        # Serve hashed assets at /assets/*
+        assets_dir = frontend_dist / "assets"
+        if assets_dir.exists():
+            app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+
+        # Root index
+        @app.get("/")
+        async def serve_root() -> FileResponse:  # type: ignore[override]
+            return FileResponse(str(index_html))
+
+        # SPA fallback: if requested path is an existing file in dist, serve it; otherwise index.html
+        @app.get("/{full_path:path}")
+        async def spa_fallback(full_path: str) -> FileResponse:  # type: ignore[override]
+            candidate = frontend_dist / full_path
+            if candidate.is_file():
+                return FileResponse(str(candidate))
+            return FileResponse(str(index_html))
 
     return app
 
