@@ -1,9 +1,12 @@
-"""Application data models package.
+"""Application data models package."""
 
-Define Pydantic models in dedicated modules under this package.
-Keep minimal during Phase 1.
-"""
+from .event import Event, EventTime, RecommendationRequest, RecommendationResponse
 
-__all__ = []
+__all__ = [
+    "Event",
+    "EventTime",
+    "RecommendationRequest",
+    "RecommendationResponse",
+]
 
 

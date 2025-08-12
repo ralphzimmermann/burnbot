@@ -9,5 +9,13 @@ services:
       - "8000:8000"
     env_file:
       - ./website/backend/.env
+    environment:
+      - SQLITE_DB_PATH=/data/app.db
+      - SECRET_KEY=${SECRET_KEY:-dev-insecure-secret}
     restart: unless-stopped
+    volumes:
+      - eventguide-db:/data
+
+volumes:
+  eventguide-db:
 

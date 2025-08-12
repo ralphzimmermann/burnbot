@@ -73,6 +73,23 @@ Expected response:
 - Follow YAGNI: only minimal endpoints in Phase 1.
 - Embedding and recommendation services will be added in later phases.
 
+### Auth & Favorites (Phase 1.1)
+
+- Minimal username/password auth with cookie session.
+- SQLite DB initialized at startup (file path defaults to `website/backend/data/app.db`).
+- Favorites are stored per user in DB. Endpoints:
+  - `POST /auth/register { username, password }` → sets session
+  - `POST /auth/login { username, password }` → sets session
+  - `POST /auth/logout`
+  - `GET /auth/me` → current user
+  - `GET /favorites` → list favorites
+  - `POST /favorites` → add favorite (send full event JSON)
+  - `DELETE /favorites/{event_id}` → remove favorite
+
+Env vars:
+- `SECRET_KEY` for session signing
+- `SQLITE_DB_PATH` to override db location (Docker uses `/data/app.db`)
+
 ### CORS
 
 Configure allowed origins (comma-separated):

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Logo from './components/Logo.jsx'
+import AuthWidget from './components/AuthWidget.jsx'
 
 export default function App({ children }) {
   const { pathname, search } = useLocation()
@@ -8,8 +9,11 @@ export default function App({ children }) {
 
   return (
     <div data-theme="caramellatte" className="min-h-screen bg-base-100 text-base-content">
-      <header className="bg-base-100">
-        <Logo />
+      <header className="bg-base-100 relative z-20">
+        <div className="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between pointer-events-auto">
+          <Logo />
+          <AuthWidget />
+        </div>
       </header>
       <main
         className={[

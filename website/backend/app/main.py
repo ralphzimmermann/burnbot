@@ -5,8 +5,12 @@ import os
 from pathlib import Path
 from fastapi.responses import FileResponse
 from starlette.staticfiles import StaticFiles
+from starlette.middleware.sessions import SessionMiddleware
 
 from app.api.recommendations import router as recommendations_router
+from app.api.auth import router as auth_router
+from app.api.favorites import router as favorites_router
+from app.db import init_db
 
 
 def create_app() -> FastAPI:
@@ -15,31 +19,44 @@ def create_app() -> FastAPI:
     Returns:
         FastAPI: Configured FastAPI app.
     """
-    app = FastAPI(title="BM EventGuide Backend", version="0.1.0")
+    app = FastAPI(title="BM EventGuide Backend", version="0.2.0")
 
     # Load environment variables from .env (if present)
     load_dotenv()
     origins_env = os.environ.get("CORS_ORIGINS")
     if not origins_env or not origins_env.strip():
-        origins_env = "http://localhost:5173,http://127.0.0.1:5173"
+        origins_env = (
+            "http://localhost:5173,http://127.0.0.1:5173,"
+            "http://localhost:5174,http://127.0.0.1:5174,"
+            "http://localhost:8000,http://127.0.0.1:8000"
+        )
     allow_origins = [o.strip() for o in origins_env.split(",") if o.strip()]
 
-    # If wildcard requested, also set a permissive regex to satisfy preflight
-    allow_origin_regex = ".*" if "*" in allow_origins else None
+    # Configure CORS. If wildcard is used, credentials cannot be allowed.
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=allow_origins if allow_origin_regex is None else ["*"],
-        allow_origin_regex=allow_origin_regex,
-        allow_credentials=False,
+        allow_origins=allow_origins,
+        allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
+        expose_headers=["set-cookie"],
+        max_age=600,
     )
+
+    # Cookie-based sessions
+    secret_key = os.environ.get("SECRET_KEY", "dev-insecure-secret")
+    app.add_middleware(SessionMiddleware, secret_key=secret_key, same_site="lax")
+
+    # Initialize database (creates tables if needed)
+    init_db()
 
     @app.get("/health")
     async def health() -> dict:
         return {"message": "Hello World"}
 
     app.include_router(recommendations_router)
+    app.include_router(auth_router)
+    app.include_router(favorites_router)
 
     # --- Frontend static files (Vite build) ---
     # Serve the built frontend from `website/frontend/dist`
