@@ -9,7 +9,7 @@ const EXAMPLES = [
   'Comedy shows or entertaining performances',
 ]
 
-export default function SearchForm({ initialQuery = '', initialMaxResults = 5, showExamples = true }) {
+export default function SearchForm({ initialQuery = '', initialMaxResults = 30, showExamples = true }) {
   const [query, setQuery] = useState(initialQuery)
   const [maxResults, setMaxResults] = useState(initialMaxResults)
   const navigate = useNavigate()
@@ -17,7 +17,7 @@ export default function SearchForm({ initialQuery = '', initialMaxResults = 5, s
   const onSubmit = (e) => {
     e.preventDefault()
     if (!query.trim()) return
-    const clamped = Math.min(Math.max(1, Number(maxResults) || Number(initialMaxResults) || 5), 50)
+    const clamped = Math.min(Math.max(1, Number(maxResults) || Number(initialMaxResults) || 30), 50)
     const params = new URLSearchParams({ q: query, k: String(clamped) })
     navigate(`/results?${params.toString()}`)
   }

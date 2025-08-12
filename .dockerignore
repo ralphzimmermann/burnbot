@@ -1,0 +1,15 @@
+website/frontend/node_modules
+website/frontend/.vite
+website/frontend/dist
+
+**/.venv
+**/venv
+**/__pycache__
+**/*.pyc
+
+.git
+.gitignore
+.DS_Store
+
+data-collector/venv
+

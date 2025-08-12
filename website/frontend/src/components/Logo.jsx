@@ -6,18 +6,13 @@ export default function Logo() {
   const navigate = useNavigate()
   const isResults = pathname === '/results' && new URLSearchParams(search).get('q')
 
-  // Fixed for smooth transforms, now clickable to navigate home
-  const baseClasses = 'fixed left-0 top-0 z-40 cursor-pointer'
+  // Fixed on desktop, static on mobile for proper flow
+  const baseClasses = 'cursor-pointer z-40 mx-auto md:mx-0 md:fixed md:top-0 md:left-0'
   const transitionClasses = 'transition-transform duration-[500ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform'
-
-  // Keep same scale in both positions. Only translate changes.
-  const style = isResults
-    ? {
-        transform: 'translate(24px, 16px) scale(1)',
-      }
-    : {
-        transform: 'translate(calc(50vw - 9rem), 0vh) scale(1)',
-      }
+  // Apply desktop-only transforms to preserve original animation/layout
+  const mdTransformClass = isResults
+    ? 'md:[transform:translate(24px,16px)_scale(1)]'
+    : 'md:[transform:translate(calc(50vw_-_9rem),0vh)_scale(1)]'
 
   const handleClick = () => {
     navigate('/')
@@ -25,8 +20,7 @@ export default function Logo() {
 
   return (
     <div 
-      className={`${baseClasses} ${transitionClasses}`} 
-      style={style}
+      className={`${baseClasses} ${transitionClasses} ${mdTransformClass}`}
       onClick={handleClick}
       role="button"
       tabIndex={0}
@@ -37,7 +31,7 @@ export default function Logo() {
         }
       }}
     >
-      <img src={'/logo.png'} alt="BM EventGuide" className={'w-72 h-auto'} />
+      <img src={'/logo.png'} alt="BM EventGuide" className={'w-40 md:w-72 h-auto'} />
     </div>
   )
 }

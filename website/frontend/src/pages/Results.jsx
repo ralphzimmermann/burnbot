@@ -9,7 +9,7 @@ export default function Results() {
   const { search } = useLocation()
   const params = useMemo(() => new URLSearchParams(search), [search])
   const q = params.get('q') || ''
-  const k = Number(params.get('k') || 5)
+  const k = Number(params.get('k') || 30)
 
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')

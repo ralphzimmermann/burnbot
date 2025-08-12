@@ -30,7 +30,7 @@ class RecommendationRequest(BaseModel):
     """Request body for recommendations."""
 
     query: str
-    max_results: int = 5
+    max_results: int = 30
 
 
 class RecommendationResponse(BaseModel):

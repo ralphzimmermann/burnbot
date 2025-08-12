@@ -1,0 +1,13 @@
+
+services:
+  eventguide:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bm-eventguide:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./website/backend/.env
+    restart: unless-stopped
+

@@ -14,7 +14,7 @@ export default function App({ children }) {
       <main
         className={[
           'mx-auto max-w-5xl px-4 pb-6 transition-all duration-[500ms] ease-[cubic-bezier(0.16,1,0.3,1)]',
-          isResults ? 'pt-16 pl-72' : 'pt-72',
+          isResults ? 'pt-4 md:pt-16 md:pl-72' : 'pt-6 md:pt-72',
         ].join(' ')}
       >
         {children}

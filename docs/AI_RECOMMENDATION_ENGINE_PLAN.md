@@ -79,7 +79,7 @@ class Event(BaseModel):
 
 class RecommendationRequest(BaseModel):
     query: str
-    max_results: int = 5
+    max_results: int = 30
 
 class RecommendationResponse(BaseModel):
     events: List[Event]
@@ -150,7 +150,7 @@ class RecommendationService:
         # Load events and embeddings, create FAISS index
         pass
     
-    async def get_recommendations(self, query: str, max_results: int = 5) -> List[Event]:
+    async def get_recommendations(self, query: str, max_results: int = 30) -> List[Event]:
         # 1. Get query embedding from GPT-5
         # 2. Search FAISS index
         # 3. Return top events
