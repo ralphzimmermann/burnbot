@@ -66,6 +66,8 @@ python -m app.services --output data/embeddings.npy              # full run
 
 The script reads `data/events.json` and saves a NumPy array to `data/embeddings.npy`.
 
+Validation: the generation script fails fast if any event has a missing or empty `title`. Fix the data (e.g., via `data-collector`) before re-running.
+
 # How to start
 
 ### 1. Collect All Events

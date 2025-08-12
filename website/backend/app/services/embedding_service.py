@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import time
 from typing import Iterable, List, Optional
+from datetime import datetime
 
 import numpy as np
 import httpx
@@ -39,6 +40,7 @@ class EmbeddingService:
         """Compose a concise text representation of an event for embedding."""
         # Only essential fields per YAGNI
         time_buckets = self._summarize_time_of_day(event.times)
+        weekday_names = self._summarize_weekdays(event.times)
         parts: List[str] = [
             (f"Title: {event.title}" if event.title else ""),
             f"Type: {event.type}",
@@ -47,6 +49,8 @@ class EmbeddingService:
         ]
         if time_buckets:
             parts.append(f"Times: {', '.join(time_buckets)}")
+        if weekday_names:
+            parts.append(f"Days: {', '.join(weekday_names)}")
         return ". ".join(p for p in parts if p).strip()
 
     @staticmethod
@@ -108,6 +112,32 @@ class EmbeddingService:
 
         bucket_order = ["morning", "afternoon", "evening", "night"]
         return [b for b in bucket_order if b in found]
+
+    @staticmethod
+    def _summarize_weekdays(times: List[EventTime]) -> List[str]:
+        """Summarize unique weekdays present in the event schedule.
+
+        Returns weekday names in Monday..Sunday order, e.g., ["Monday", "Thursday"].
+        """
+        weekday_index_to_name = [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+        ]
+        found_indexes: set[int] = set()
+        for t in times:
+            try:
+                # Expecting MM/DD/YYYY
+                dt = datetime.strptime(t.date, "%m/%d/%Y")
+                found_indexes.add(int(dt.weekday()))  # Monday=0..Sunday=6
+            except Exception:
+                continue
+
+        return [weekday_index_to_name[i] for i in range(7) if i in found_indexes]
 
     def generate_event_embedding(self, event: Event) -> List[float]:
         """Generate an embedding vector for a single event.

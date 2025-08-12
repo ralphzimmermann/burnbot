@@ -60,6 +60,15 @@ def main() -> None:
 
     events = [Event.model_validate(item) for item in data]
 
+    # Validate that all events have titles before generating embeddings
+    missing_title_ids = [e.id for e in events if not (e.title and e.title.strip())]
+    if missing_title_ids:
+        sample = ", ".join(missing_title_ids[:10])
+        raise SystemExit(
+            f"Found {len(missing_title_ids)} event(s) with missing/empty title. "
+            f"Example IDs: {sample}. Please fix data/events.json before generating embeddings."
+        )
+
     service = EmbeddingService(openai_api_key=api_key)
     vectors = service.generate_all_embeddings(events)
 

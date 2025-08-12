@@ -17,7 +17,7 @@ class RerankService:
     def __init__(
         self,
         openai_api_key: Optional[str] = None,
-        model: str = "gpt-3.5-turbo",
+        model: str = "gpt-4.1-2025-04-14",
         max_retries: int = 4,
         initial_backoff_s: float = 1.0,
         request_timeout_s: float = 60.0,
@@ -77,6 +77,7 @@ class RerankService:
                 ),
             },
         ]
+        print(f"Messages: {messages}")
 
         backoff = self.initial_backoff_s
         last_error: Optional[Exception] = None

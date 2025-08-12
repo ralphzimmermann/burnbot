@@ -3,7 +3,9 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
-from typing import List, Tuple, Optional, Tuple
+from typing import List, Tuple, Optional, Tuple, Set
+from datetime import datetime
+import re
 
 import faiss
 import numpy as np
@@ -81,7 +83,7 @@ class RecommendationService:
         # Fetch more candidates for potential reranking
         initial_k = max(self.rerank_top_n if self.rerank_enabled else max_results, max_results)
         matches = self.find_similar_events(query_vec, k=initial_k)
-
+        print(f"Matches: {len(matches)}")
         # Map matches to events, dedup by id preserving order
         seen: set[str] = set()
         candidates: List[Event] = []
@@ -90,10 +92,24 @@ class RecommendationService:
             if ev.id not in seen:
                 candidates.append(ev)
                 seen.add(ev.id)
+                print(f"Added: {ev}")
             if len(candidates) >= initial_k:
                 break
 
-        if self.rerank_enabled and candidates:
+        # Parse temporal filters (weekday, time-of-day) from query and filter candidates
+        weekday_indexes, time_buckets = self._parse_temporal_filters(query)
+
+        filtered: List[Event] = candidates
+        if weekday_indexes or time_buckets:
+            filtered = [e for e in candidates if self._event_matches_filters(e, weekday_indexes, time_buckets)]
+            # Progressive fallback if over-constrained
+            if not filtered and weekday_indexes and time_buckets:
+                only_weekday = [e for e in candidates if self._event_matches_filters(e, weekday_indexes, None)]
+                filtered = only_weekday or [e for e in candidates if self._event_matches_filters(e, None, time_buckets)]
+
+        working_set = filtered or candidates
+
+        if self.rerank_enabled and working_set:
             try:
                 order, rationale_text = self.rerank_service.rerank(
                     query,
@@ -105,16 +121,135 @@ class RecommendationService:
                             "camp": e.camp,
                             "description": e.description,
                         }
-                        for e in candidates
+                        for e in working_set
                     ],
                 )
-                id_to_event = {e.id: e for e in candidates}
+                id_to_event = {e.id: e for e in working_set}
                 reranked = [id_to_event[i] for i in order if i in id_to_event]
                 return reranked[: max_results], rationale_text
             except Exception:
                 # On failure, fall back to vector order
-                return candidates[: max_results], None
+                return working_set[: max_results], None
 
-        return candidates[: max_results], None
+        return working_set[: max_results], None
+
+    # --- Internal helpers for temporal parsing and filtering ---
+    @staticmethod
+    def _parse_temporal_filters(query: str) -> Tuple[Optional[Set[int]], Optional[Set[str]]]:
+        """Extract weekday indexes and time-of-day buckets from a free-text query.
+
+        Returns:
+            (weekday_indexes, time_buckets) where weekday_indexes are Monday=0..Sunday=6
+            and time_buckets are in {"morning","afternoon","evening","night"}.
+        """
+        q = query.lower()
+        # Weekday detection with aliases
+        weekday_aliases = {
+            "monday": 0, "mon": 0,
+            "tuesday": 1, "tue": 1, "tues": 1,
+            "wednesday": 2, "wed": 2,
+            "thursday": 3, "thu": 3, "thur": 3, "thurs": 3,
+            "friday": 4, "fri": 4,
+            "saturday": 5, "sat": 5,
+            "sunday": 6, "sun": 6,
+        }
+        weekday_indexes: Set[int] = set()
+        for token, idx in weekday_aliases.items():
+            if re.search(r"\b" + re.escape(token) + r"\b", q):
+                weekday_indexes.add(idx)
+
+        # Time-of-day buckets with synonyms
+        bucket_aliases = {
+            "morning": "morning",
+            "afternoon": "afternoon",
+            "evening": "evening",
+            "night": "night",
+            "late night": "night",
+            "latenight": "night",
+            "tonight": "night",  # heuristic
+        }
+        time_buckets: Set[str] = set()
+        # Longer phrases first to avoid partial matches
+        for phrase in sorted(bucket_aliases.keys(), key=len, reverse=True):
+            if re.search(r"\b" + re.escape(phrase) + r"\b", q):
+                time_buckets.add(bucket_aliases[phrase])
+
+        return (weekday_indexes or None), (time_buckets or None)
+
+    @staticmethod
+    def _event_matches_filters(event: Event, weekday_indexes: Optional[Set[int]], time_buckets: Optional[Set[str]]) -> bool:
+        """Return True if the event matches all provided filters.
+
+        - If weekday_indexes provided, at least one occurrence must be on one of those weekdays.
+        - If time_buckets provided, at least one occurrence must overlap one of those buckets.
+        If both provided, a single occurrence must satisfy both (same occurrence).
+        """
+        def to_minutes(hhmm: str) -> Optional[int]:
+            try:
+                hh, mm = hhmm.split(":")
+                h = int(hh); m = int(mm)
+                if 0 <= h <= 23 and 0 <= m <= 59:
+                    return h * 60 + m
+                return None
+            except Exception:
+                return None
+
+        # Bucket ranges (start inclusive, end exclusive)
+        MORNING = (5 * 60, 12 * 60)
+        AFTERNOON = (12 * 60, 17 * 60)
+        EVENING = (17 * 60, 21 * 60)
+        NIGHT_1 = (21 * 60, 24 * 60)
+        NIGHT_2 = (0, 5 * 60)
+
+        def overlaps(a_start: int, a_end: int, b_start: int, b_end: int) -> bool:
+            return a_start < b_end and a_end > b_start
+
+        def matches_bucket(seg_start: int, seg_end: int, bucket: str) -> bool:
+            if bucket == "morning":
+                return overlaps(seg_start, seg_end, *MORNING)
+            if bucket == "afternoon":
+                return overlaps(seg_start, seg_end, *AFTERNOON)
+            if bucket == "evening":
+                return overlaps(seg_start, seg_end, *EVENING)
+            if bucket == "night":
+                return overlaps(seg_start, seg_end, *NIGHT_1) or overlaps(seg_start, seg_end, *NIGHT_2)
+            return False
+
+        for t in event.times:
+            # Parse weekday
+            weekday_ok = True
+            if weekday_indexes is not None:
+                try:
+                    dt = datetime.strptime(t.date, "%m/%d/%Y")
+                    weekday_ok = (dt.weekday() in weekday_indexes)
+                except Exception:
+                    weekday_ok = False
+
+            if not weekday_ok:
+                continue
+
+            # Parse time and evaluate buckets
+            bucket_ok = True
+            if time_buckets is not None:
+                start = to_minutes(t.start_time)
+                end = to_minutes(t.end_time)
+                if start is None or end is None:
+                    bucket_ok = False
+                else:
+                    segments: List[tuple[int, int]]
+                    if end >= start:
+                        segments = [(start, end)]
+                    else:
+                        segments = [(start, 24 * 60), (0, end)]
+                    bucket_ok = any(
+                        matches_bucket(seg_start, seg_end, bucket)
+                        for bucket in time_buckets
+                        for seg_start, seg_end in segments
+                    )
+
+            if weekday_ok and bucket_ok:
+                return True
+
+        return False
 
 
