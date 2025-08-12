@@ -2,6 +2,33 @@
 
 Minimal FastAPI backend foundation for the AI Recommendation Engine.
 
+## Quickstart
+
+### Local (recommended for dev)
+
+```bash
+cd website/backend
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+# Optional but recommended if you want data-backed endpoints
+mkdir -p data && ln -sf ../../data/events.json data/events.json
+
+uvicorn app.main:app --reload --port 8000
+# Health check
+curl http://localhost:8000/health
+```
+
+### Docker (serves API and built frontend)
+
+```bash
+cd <repo-root>
+docker compose up -d
+open http://localhost:8000
+```
+
+See `docs/DOCKER.md` for details (env vars, how it bundles frontend, etc.).
+
 ## Setup
 
 1. Create a virtual environment (recommended):
