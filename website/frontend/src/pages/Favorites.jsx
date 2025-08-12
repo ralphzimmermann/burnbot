@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useFavorites } from '../services/favorites.jsx'
 import EventCard from '../components/EventCard.jsx'
 import Tabs from '../components/Tabs.jsx'
 
 export default function Favorites() {
-  const { favorites } = useFavorites()
+  const { favorites, refreshFavorites } = useFavorites()
+
+  // Reload favorites when visiting the page to ensure latest server state
+  useEffect(() => {
+    refreshFavorites()
+  }, [refreshFavorites])
 
   return (
     <div className="space-y-6">

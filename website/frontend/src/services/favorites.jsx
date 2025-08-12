@@ -12,26 +12,34 @@ export function FavoritesProvider({ children }) {
     return new Set(favoriteEvents.map((ev) => ev.id))
   }, [favoriteEvents])
 
+  const refreshFavorites = useCallback(async () => {
+    try {
+      await apiMe()
+      setIsAuthed(true)
+    } catch {
+      setIsAuthed(false)
+      setFavoriteEvents([])
+      return
+    }
+    try {
+      const favs = await apiListFavorites()
+      setFavoriteEvents(Array.isArray(favs) ? favs : [])
+    } catch {
+      // If fetching fails, keep current state rather than clearing
+    }
+  }, [])
+
   // On mount, check session and load favorites if logged in
   useEffect(() => {
     let cancelled = false
-    async function bootstrap() {
-      try {
-        await apiMe()
-        if (cancelled) return
-        setIsAuthed(true)
-        const favs = await apiListFavorites()
-        if (!cancelled) setFavoriteEvents(Array.isArray(favs) ? favs : [])
-      } catch {
-        if (!cancelled) {
-          setIsAuthed(false)
-          setFavoriteEvents([])
-        }
-      }
+    ;(async () => {
+      if (cancelled) return
+      await refreshFavorites()
+    })()
+    return () => {
+      cancelled = true
     }
-    bootstrap()
-    return () => { cancelled = true }
-  }, [])
+  }, [refreshFavorites])
 
   const addFavorite = useCallback(async (event) => {
     if (!event || !event.id) return
@@ -71,25 +79,50 @@ export function FavoritesProvider({ children }) {
     }
   }, [favoriteIdsSet])
 
-  const addManyFavorites = useCallback((events) => {
+  const addManyFavorites = useCallback(async (events) => {
     if (!Array.isArray(events) || events.length === 0) return
+    // Filter out ones we already have locally to avoid redundant requests
+    const toAdd = events.filter((ev) => ev && ev.id && !favoriteIdsSet.has(ev.id))
+    if (toAdd.length === 0) return
+
+    // Fire requests concurrently; tolerate duplicates or failures
+    const results = await Promise.allSettled(toAdd.map((ev) => apiAddFavorite(ev)))
+
+    // If any request failed due to auth, reflect that
+    const hadAuthFailure = results.some((r) => r.status === 'rejected' && r.reason?.response?.status === 401)
+    if (hadAuthFailure) {
+      setIsAuthed(false)
+      setFavoriteEvents([])
+      return
+    }
+
+    // Merge successfully added ones into local state
+    const successfulIds = new Set(
+      results
+        .map((r, idx) => (r.status === 'fulfilled' ? toAdd[idx].id : null))
+        .filter(Boolean)
+    )
+
+    if (successfulIds.size === 0) return
+
     setFavoriteEvents((prev) => {
       const existingIds = new Set(prev.map((ev) => ev.id))
-      const toAdd = events.filter((ev) => ev && ev.id && !existingIds.has(ev.id))
-      if (toAdd.length === 0) return prev
-      return [...prev, ...toAdd]
+      const newlyAdded = toAdd.filter((ev) => successfulIds.has(ev.id) && !existingIds.has(ev.id))
+      if (newlyAdded.length === 0) return prev
+      return [...prev, ...newlyAdded]
     })
-  }, [])
+  }, [favoriteIdsSet])
 
   const value = useMemo(() => ({
     favorites: favoriteEvents,
     favoriteIdsSet,
     isAuthed,
+    refreshFavorites,
     addFavorite,
     removeFavorite,
     toggleFavorite,
     addManyFavorites,
-  }), [favoriteEvents, favoriteIdsSet, isAuthed, addFavorite, removeFavorite, toggleFavorite, addManyFavorites])
+  }), [favoriteEvents, favoriteIdsSet, isAuthed, refreshFavorites, addFavorite, removeFavorite, toggleFavorite, addManyFavorites])
 
   return <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>
 }
