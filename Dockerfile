@@ -1,7 +1,8 @@
 # syntax=docker/dockerfile:1
 
 # --- Build frontend (Vite) ---
-FROM node:20-alpine AS frontend-builder
+# Use Debian-based image so lightningcss has a compatible prebuilt binary (alpine/musl lacks it)
+FROM node:20-bookworm-slim AS frontend-builder
 WORKDIR /app/website/frontend
 
 # Install dependencies first (better caching)

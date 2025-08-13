@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Tabs from '../components/Tabs.jsx'
 import { useFavorites } from '../services/favorites.jsx'
 
@@ -23,8 +23,13 @@ function timeToMinutes(t) {
 }
 
 export default function WeekView() {
-  const { favorites } = useFavorites()
+  const { favorites, refreshFavorites } = useFavorites()
   const [expandedKeys, setExpandedKeys] = useState(() => new Set())
+
+  // Ensure latest favorites when arriving on this tab
+  useEffect(() => {
+    refreshFavorites()
+  }, [refreshFavorites])
 
   const byDate = useMemo(() => {
     const map = new Map(WEEK_DAYS.map((d) => [d.dateStr, []]))
@@ -68,7 +73,19 @@ export default function WeekView() {
           const items = byDate.get(day.dateStr) || []
           return (
             <div key={day.dateStr} className="bg-base-100 border rounded">
-              <div className="px-3 py-2 border-b font-medium">{day.label}</div>
+              <div className="px-3 py-2 border-b font-medium">
+                <button
+                  type="button"
+                  className="link link-hover"
+                  onClick={() => {
+                    const url = `/print/day/${encodeURIComponent(day.dateStr)}`
+                    window.open(url, '_blank', 'noopener,noreferrer')
+                  }}
+                  title="Open printable day view"
+                >
+                  {day.label}
+                </button>
+              </div>
               <div className="p-2 space-y-2">
                 {items.length === 0 && (
                   <div className="text-sm opacity-60">No favorites</div>

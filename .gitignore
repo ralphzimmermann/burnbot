@@ -4,3 +4,6 @@
 *__pycache__
 
 website/backend/.env
+/website/frontend/dist
+/website/frontend/dist/assets
+/website/frontend/dist

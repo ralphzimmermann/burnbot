@@ -1,36 +1,34 @@
 # Favorites (Frontend)
 
-This feature lets users mark events as favorites without authentication. Favorites are stored in `localStorage` and synchronized across tabs.
+Users can mark events as favorites. Favorites are stored per user on the backend and loaded via the API using cookie-based sessions.
 
 ## Storage
-- Key: `bm-eventguide.favorites.v1`
-- Value: JSON array of event objects; deduplicated by `event.id`.
+- Backend SQLite via API, keyed by user session.
 
 ## API
-- `src/services/favorites.jsx`
+- `website/frontend/src/services/favorites.jsx`
   - `<FavoritesProvider>`: Context provider wrapping the app.
   - `useFavorites()` returns:
     - `favorites`: array of favorite events
     - `favoriteIdsSet`: `Set<string>` for O(1) lookups
+    - `isAuthed`: boolean
+    - `refreshFavorites()`: re-fetch from server
     - `addFavorite(event)`, `removeFavorite(eventId)`, `toggleFavorite(event)`, `addManyFavorites(events)`
+      - `addManyFavorites(events)` posts each new event concurrently to the backend using the same endpoint as single add. Already-favorited events are skipped client-side. Auth failures clear local favorites and mark `isAuthed=false`.
 
 ## UI integration
-- Heart toggle on each `EventCard` top-right: outline when not favorite, filled when favorite.
+- Heart toggle on each `EventCard` top-right.
 - "Add all to favorites" button in `Results` header when there are search results.
-- Tabs beneath logo, above search: `Search` and `Favorites` (component `src/components/Tabs.jsx`).
-- `Favorites` page at route `/favorites` lists saved events using `EventCard`.
+- Tabs: `Search`, `Favorites`, `Week View` (`website/frontend/src/components/Tabs.jsx`).
+- `Favorites` page (`/favorites`) lists saved events.
+- `Week View` (`/week`) organizes favorites by festival day/time.
+  - Clicking a day label opens a printable view in a new tab.
+  - Print route: `/print/day/:date` (date format `MM/DD/YYYY`).
+  - The print page lists all favorite events for that date, sorted by start time, including full descriptions and basic metadata.
 
-## Files changed
-- `src/services/favorites.js` (new)
-- `src/components/EventCard.jsx` (heart toggle)
-- `src/components/Tabs.jsx` (new)
-- `src/pages/Home.jsx` (tabs added)
-- `src/pages/Results.jsx` (tabs + add-all button)
-- `src/pages/Favorites.jsx` (new)
-- `src/main.jsx` (provider + route)
+## Auto-refresh behavior
+- To keep multiple browsers in sync, both `Favorites` and `Week View` call `refreshFavorites()` on mount. When switching tabs/routes to these pages, the latest server state is shown.
 
 ## Notes
-- The provider persists on every change and listens to the `storage` event for cross-tab sync.
-- Events are appended as-is; UI reads only fields it needs. If backend event shape changes, ensure `id` is stable.
-- For future server sync, replace storage read/write with API calls inside the provider.
+- Event shape is stored as sent by the client; ensure `id` is stable.
 

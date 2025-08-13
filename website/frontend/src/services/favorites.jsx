@@ -1,93 +1,128 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
-
-const FAVORITES_STORAGE_KEY = 'bm-eventguide.favorites.v1'
-
-function readFavoritesFromStorage() {
-  try {
-    const raw = localStorage.getItem(FAVORITES_STORAGE_KEY)
-    if (!raw) return []
-    const parsed = JSON.parse(raw)
-    if (!Array.isArray(parsed)) return []
-    return parsed
-  } catch {
-    return []
-  }
-}
-
-function writeFavoritesToStorage(favoriteEvents) {
-  try {
-    localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favoriteEvents))
-  } catch {
-    // ignore write errors
-  }
-}
+import { addFavorite as apiAddFavorite, removeFavorite as apiRemoveFavorite, listFavorites as apiListFavorites, me as apiMe } from './api'
 
 const FavoritesContext = createContext(null)
 
 export function FavoritesProvider({ children }) {
-  const [favoriteEvents, setFavoriteEvents] = useState(() => readFavoritesFromStorage())
+  const [favoriteEvents, setFavoriteEvents] = useState([])
+  const [isAuthed, setIsAuthed] = useState(false)
 
   // Keep a quick lookup Set of IDs for fast checks
   const favoriteIdsSet = useMemo(() => {
     return new Set(favoriteEvents.map((ev) => ev.id))
   }, [favoriteEvents])
 
-  // Persist to localStorage when favorites change
-  useEffect(() => {
-    writeFavoritesToStorage(favoriteEvents)
-  }, [favoriteEvents])
-
-  // Sync across tabs/windows
-  useEffect(() => {
-    function onStorage(e) {
-      if (e.key === FAVORITES_STORAGE_KEY) {
-        setFavoriteEvents(readFavoritesFromStorage())
-      }
+  const refreshFavorites = useCallback(async () => {
+    try {
+      await apiMe()
+      setIsAuthed(true)
+    } catch {
+      setIsAuthed(false)
+      setFavoriteEvents([])
+      return
     }
-    window.addEventListener('storage', onStorage)
-    return () => window.removeEventListener('storage', onStorage)
+    try {
+      const favs = await apiListFavorites()
+      setFavoriteEvents(Array.isArray(favs) ? favs : [])
+    } catch {
+      // If fetching fails, keep current state rather than clearing
+    }
   }, [])
 
-  const addFavorite = useCallback((event) => {
+  // On mount, check session and load favorites if logged in
+  useEffect(() => {
+    let cancelled = false
+    ;(async () => {
+      if (cancelled) return
+      await refreshFavorites()
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [refreshFavorites])
+
+  const addFavorite = useCallback(async (event) => {
     if (!event || !event.id) return
-    setFavoriteEvents((prev) => {
-      if (prev.some((ev) => ev.id === event.id)) return prev
-      return [...prev, event]
-    })
+    try {
+      await apiAddFavorite(event)
+      setFavoriteEvents((prev) => {
+        if (prev.some((ev) => ev.id === event.id)) return prev
+        return [...prev, event]
+      })
+    } catch {
+      // ignore
+    }
   }, [])
 
-  const removeFavorite = useCallback((eventId) => {
+  const removeFavorite = useCallback(async (eventId) => {
     if (!eventId) return
-    setFavoriteEvents((prev) => prev.filter((ev) => ev.id !== eventId))
+    try {
+      await apiRemoveFavorite(eventId)
+    } finally {
+      setFavoriteEvents((prev) => prev.filter((ev) => ev.id !== eventId))
+    }
   }, [])
 
-  const toggleFavorite = useCallback((event) => {
+  const toggleFavorite = useCallback(async (event) => {
     if (!event || !event.id) return
-    setFavoriteEvents((prev) => {
-      const exists = prev.some((ev) => ev.id === event.id)
-      if (exists) return prev.filter((ev) => ev.id !== event.id)
-      return [...prev, event]
-    })
-  }, [])
+    const exists = favoriteIdsSet.has(event.id)
+    try {
+      if (exists) {
+        await apiRemoveFavorite(event.id)
+        setFavoriteEvents((prev) => prev.filter((ev) => ev.id !== event.id))
+      } else {
+        await apiAddFavorite(event)
+        setFavoriteEvents((prev) => (prev.some((ev) => ev.id === event.id) ? prev : [...prev, event]))
+      }
+    } catch {
+      // noop
+    }
+  }, [favoriteIdsSet])
 
-  const addManyFavorites = useCallback((events) => {
+  const addManyFavorites = useCallback(async (events) => {
     if (!Array.isArray(events) || events.length === 0) return
+    // Filter out ones we already have locally to avoid redundant requests
+    const toAdd = events.filter((ev) => ev && ev.id && !favoriteIdsSet.has(ev.id))
+    if (toAdd.length === 0) return
+
+    // Fire requests concurrently; tolerate duplicates or failures
+    const results = await Promise.allSettled(toAdd.map((ev) => apiAddFavorite(ev)))
+
+    // If any request failed due to auth, reflect that
+    const hadAuthFailure = results.some((r) => r.status === 'rejected' && r.reason?.response?.status === 401)
+    if (hadAuthFailure) {
+      setIsAuthed(false)
+      setFavoriteEvents([])
+      return
+    }
+
+    // Merge successfully added ones into local state
+    const successfulIds = new Set(
+      results
+        .map((r, idx) => (r.status === 'fulfilled' ? toAdd[idx].id : null))
+        .filter(Boolean)
+    )
+
+    if (successfulIds.size === 0) return
+
     setFavoriteEvents((prev) => {
       const existingIds = new Set(prev.map((ev) => ev.id))
-      const toAdd = events.filter((ev) => ev && ev.id && !existingIds.has(ev.id))
-      if (toAdd.length === 0) return prev
-      return [...prev, ...toAdd]
+      const newlyAdded = toAdd.filter((ev) => successfulIds.has(ev.id) && !existingIds.has(ev.id))
+      if (newlyAdded.length === 0) return prev
+      return [...prev, ...newlyAdded]
     })
-  }, [])
+  }, [favoriteIdsSet])
 
   const value = useMemo(() => ({
     favorites: favoriteEvents,
     favoriteIdsSet,
+    isAuthed,
+    refreshFavorites,
     addFavorite,
     removeFavorite,
     toggleFavorite,
     addManyFavorites,
-  }), [favoriteEvents, favoriteIdsSet, addFavorite, removeFavorite, toggleFavorite, addManyFavorites])
+  }), [favoriteEvents, favoriteIdsSet, isAuthed, refreshFavorites, addFavorite, removeFavorite, toggleFavorite, addManyFavorites])
 
   return <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>
 }
