@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useLocation } from 'react-router-dom'
 import { useFavorites } from '../services/favorites.jsx'
 
 function timeToMinutes(t) {
@@ -11,8 +11,44 @@ function timeToMinutes(t) {
   return hours * 60 + minutes
 }
 
+function getTimeBucketLabelFromMinutes(m) {
+  const FOUR_AM = 4 * 60
+  const EIGHT_AM = 8 * 60
+  const ELEVEN_THIRTY = 11 * 60 + 30
+  const THREE_PM = 15 * 60
+  const SIX_PM = 18 * 60
+  const NINE_PM = 21 * 60
+  if (m < FOUR_AM) return 'Night'
+  if (m < EIGHT_AM) return 'Early morning'
+  if (m < ELEVEN_THIRTY) return 'Morning'
+  if (m < THREE_PM) return 'Lunch'
+  if (m < SIX_PM) return 'Afternoon'
+  if (m < NINE_PM) return 'Evening'
+  return 'Night'
+}
+
+const TYPE_TO_EMOJI = {
+  'All Events': '✨',
+  'Arts & Crafts': '🎨',
+  'Beverages': '🍹',
+  'Class/Workshop': '🧑‍🏫',
+  'Food': '🍽️',
+  'Kids Activities': '🎈',
+  'Mature Audiences': '🔞',
+  'Music/Party': '🪩',
+  'Other': '❓',
+}
+
+function getTypeEmoji(type) {
+  if (!type) return TYPE_TO_EMOJI['Other']
+  return TYPE_TO_EMOJI[type] || TYPE_TO_EMOJI['Other']
+}
+
 export default function PrintDay() {
   const { date } = useParams()
+  const { search } = useLocation()
+  const params = useMemo(() => new URLSearchParams(search), [search])
+  const typeFilter = params.get('type') || 'All Events'
   const { favorites, refreshFavorites } = useFavorites()
 
   // Ensure favorites are loaded when this page opens in a new tab
@@ -24,6 +60,7 @@ export default function PrintDay() {
     const results = []
     for (const ev of favorites) {
       if (!Array.isArray(ev?.times)) continue
+      if (typeFilter !== 'All Events' && ev.type !== typeFilter) continue
       for (const t of ev.times) {
         if (t?.date === date) {
           results.push({ key: `${ev.id}|${t.date}|${t.start_time}|${t.end_time}`, event: ev, time: t })
@@ -32,7 +69,7 @@ export default function PrintDay() {
     }
     results.sort((a, b) => timeToMinutes(a.time?.start_time) - timeToMinutes(b.time?.start_time))
     return results
-  }, [favorites, date])
+  }, [favorites, date, typeFilter])
 
   const displayDate = useMemo(() => {
     if (!date || typeof date !== 'string') return String(date || '')
@@ -52,7 +89,7 @@ export default function PrintDay() {
     <div className="max-w-3xl mx-auto px-4 py-6">
       {/* Screen-only controls */}
       <div className="flex items-center justify-between gap-2 mb-6 print:hidden">
-        <h1 className="text-xl font-semibold">Print view for {displayDate}</h1>
+        <h1 className="text-xl font-semibold">{getTypeEmoji(typeFilter)} {typeFilter}</h1>
         <div className="flex items-center gap-2">
           <button className="btn btn-sm" onClick={() => window.print()}>Print</button>
           <Link to="/week" className="btn btn-sm btn-outline">Back to week</Link>
@@ -70,29 +107,47 @@ export default function PrintDay() {
           <div className="text-sm opacity-80">No favorites on this day.</div>
         )}
 
-        {items.map(({ key, event, time }) => (
-          <article key={key} className="break-inside-avoid">
-            <h2 className="text-lg font-semibold">{event.title || 'Untitled event'}</h2>
-            <div className="mt-1 text-sm opacity-80">
-              {time?.start_time || '--:--'} – {time?.end_time || '--:--'}
-            </div>
-            <div className="mt-1 text-sm">
-              <span className="opacity-90">{event.location}</span>
-            </div>
-            <div className="mt-1 text-sm">
-              {event.campurl ? (
-                <a href={event.campurl} target="_blank" rel="noreferrer" className="link link-primary">
-                  {event.camp}
-                </a>
-              ) : (
-                <span className="opacity-80">{event.camp}</span>
-              )}
-            </div>
-            <div className="mt-3 text-sm leading-6 whitespace-pre-line">
-              {event.description}
-            </div>
-          </article>
-        ))}
+        {(() => {
+          const content = []
+          let lastLabel = null
+          let groupIdx = 0
+          for (const { key, event, time } of items) {
+            const startMinutes = timeToMinutes(time?.start_time)
+            const label = getTimeBucketLabelFromMinutes(startMinutes)
+            if (label !== lastLabel) {
+              content.push(
+                <div key={`div-${groupIdx++}-${label}`} className="divider text-xs uppercase font-bold opacity-70 print:opacity-100 print:text-black">
+                  {label}
+                </div>
+              )
+              lastLabel = label
+            }
+            content.push(
+              <article key={key} className="break-inside-avoid">
+                <h2 className="text-lg font-semibold">{getTypeEmoji(event.type)} {event.title || 'Untitled event'}</h2>
+                <div className="mt-1 text-sm opacity-80 print:opacity-100">
+                  {time?.start_time || '--:--'} – {time?.end_time || '--:--'}{Array.isArray(event?.times) && event.times.length > 1 ? <span className="ml-1" title="This event has multiple time slots">🔁</span> : null}
+                </div>
+                <div className="mt-1 text-sm">
+                  <span className="opacity-90 print:opacity-100">{event.location}</span>
+                </div>
+                <div className="mt-1 text-sm">
+                  {event.campurl ? (
+                    <a href={event.campurl} target="_blank" rel="noreferrer" className="link link-primary">
+                      {event.camp}
+                    </a>
+                  ) : (
+                    <span className="opacity-80 print:opacity-100">{event.camp}</span>
+                  )}
+                </div>
+                <div className="mt-3 text-sm leading-6 whitespace-pre-line">
+                  {event.description}
+                </div>
+              </article>
+            )
+          }
+          return content
+        })()}
       </div>
 
       <style>{`
