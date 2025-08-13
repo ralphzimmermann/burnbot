@@ -7258,22 +7258,6 @@
     "description": "A yoga class taught on our bamboo dance floor!"
   },
   {
-    "id": "51155",
-    "title": "Stand-up Comedy",
-    "times": [
-      {
-        "date": "08/27/2025",
-        "start_time": "16:00",
-        "end_time": "16:45"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Camp Kinetic",
-    "campurl": "http://campkinetic.org",
-    "location": "Camp Kinetic",
-    "description": "Turning everyday life into crap-your-pants-from-laughter comedy"
-  },
-  {
     "id": "51156",
     "title": "Time Travel with Diamond",
     "times": [
@@ -20672,27 +20656,6 @@
     "description": "Have your Dusty Portrait taken by professional photographers at the Central Camp!"
   },
   {
-    "id": "51782",
-    "title": "Underwater Photography on the Playa",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "15:00",
-        "end_time": "17:00"
-      },
-      {
-        "date": "08/28/2025",
-        "start_time": "15:00",
-        "end_time": "17:00"
-      }
-    ],
-    "type": "Arts & Crafts",
-    "camp": "",
-    "campurl": "",
-    "location": "Central Camp",
-    "description": "This is your only chance to get an underwater portrait on the Playa!"
-  },
-  {
     "id": "51783",
     "title": "Jewelry Making + Leather Branding",
     "times": [
@@ -24218,58 +24181,6 @@
     "description": "spicy vodka and beer mixers, come see if you can handle smoked ghost and scorpion pepper vodka without breathing fire!"
   },
   {
-    "id": "51953",
-    "title": "Melon Motel After Dark",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "22:00",
-        "end_time": "06:00"
-      },
-      {
-        "date": "08/28/2025",
-        "start_time": "22:00",
-        "end_time": "06:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "",
-    "campurl": "",
-    "location": "jaredlyons",
-    "description": "Move, sip, repeat. Juicy beats and frozen melon margs fuel the night!"
-  },
-  {
-    "id": "51954",
-    "title": "Room Service Karaoke",
-    "times": [
-      {
-        "date": "08/25/2025",
-        "start_time": "16:00",
-        "end_time": "19:00"
-      },
-      {
-        "date": "08/26/2025",
-        "start_time": "16:00",
-        "end_time": "19:00"
-      },
-      {
-        "date": "08/27/2025",
-        "start_time": "16:00",
-        "end_time": "19:00"
-      },
-      {
-        "date": "08/30/2025",
-        "start_time": "16:00",
-        "end_time": "19:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "",
-    "campurl": "",
-    "location": "jaredlyons",
-    "description": "No judgment—just margs, music, and your biggest vocals!"
-  },
-  {
     "id": "51955",
     "title": "Playa Choir Rehearsal",
     "times": [
@@ -25243,22 +25154,6 @@
     "description": "Join for a journey inward as we use the gifts of breath and music to connect"
   },
   {
-    "id": "51998",
-    "title": "Buttplug Tug of Wars",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "15:45",
-        "end_time": "04:45"
-      }
-    ],
-    "type": "Mature Audiences",
-    "camp": "Dickhead Camp",
-    "campurl": "",
-    "location": "Dickhead Camp",
-    "description": "Cum be rewarded for being a tight-ass. Prove to everyone that you are the most anal."
-  },
-  {
     "id": "51999",
     "title": "Reggaeton Rave (Raveton)",
     "times": [
@@ -25321,22 +25216,6 @@
     "campurl": "",
     "location": "Event Horizon",
     "description": "Join BAAAHS x Lucid Paradise for tasty sausages and dancing at Event Horizon!"
-  },
-  {
-    "id": "52003",
-    "title": "Vinyasa Flow",
-    "times": [
-      {
-        "date": "08/28/2025",
-        "start_time": "11:00",
-        "end_time": "12:15"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "PALINKA LOUNGE",
-    "campurl": "https://www.facebook.com/PalinkaLounge/",
-    "location": "PALINKA LOUNGE",
-    "description": "Nurture your being as we move our bodies and breathe together while listening to some fine tunes. Bring your own mat."
   },
   {
     "id": "52004",
@@ -33277,37 +33156,6 @@
     "description": "Stop-by and refuel with iced coffee, iced tea and green juice"
   },
   {
-    "id": "52382",
-    "title": "Afternoon Refuel Lounge",
-    "times": [
-      {
-        "date": "08/24/2025",
-        "start_time": "14:00",
-        "end_time": "17:00"
-      },
-      {
-        "date": "08/25/2025",
-        "start_time": "14:00",
-        "end_time": "17:00"
-      },
-      {
-        "date": "08/26/2025",
-        "start_time": "14:00",
-        "end_time": "17:00"
-      },
-      {
-        "date": "08/29/2025",
-        "start_time": "14:00",
-        "end_time": "17:00"
-      }
-    ],
-    "type": "Beverages",
-    "camp": "Cockpit",
-    "campurl": "",
-    "location": "Cockpit",
-    "description": "Get your afternoon started with light beats and refreshing cocktails"
-  },
-  {
     "id": "52383",
     "title": "WARM UP WITH UKRAINIAN BORSHCH!",
     "times": [
@@ -33693,22 +33541,6 @@
     "campurl": "https://karmalove.camp",
     "location": "Karma Love Camp",
     "description": "Kelvin (Pancake Papa) would beat your grandma in a pancake bake-off. Fluffy, decadent, and loaded with toppings!"
-  },
-  {
-    "id": "52400",
-    "title": "Braids, Brushes & Body Art",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "11:30",
-        "end_time": "14:30"
-      }
-    ],
-    "type": "Other",
-    "camp": "Karma Love Camp",
-    "campurl": "https://karmalove.camp",
-    "location": "Karma Love Camp",
-    "description": "Get your hair braided with colorful extensions, and your body airbrushed with geometric patterns!"
   },
   {
     "id": "52401",
@@ -34394,22 +34226,6 @@
     "description": "Flowing with our yogis. Come along on a fantastic flow in our mysting tent."
   },
   {
-    "id": "52440",
-    "title": "Understanding Telepathic Communication",
-    "times": [
-      {
-        "date": "08/30/2025",
-        "start_time": "12:00",
-        "end_time": "13:45"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Mystic",
-    "campurl": "https://campmystic.org/",
-    "location": "Mystic",
-    "description": "What can we learn from individuals with autism who communicate telepathically?"
-  },
-  {
     "id": "52441",
     "title": "Dungeon 101",
     "times": [
@@ -34902,6 +34718,22 @@
     "campurl": "https://www.facebook.com/toxicdiscoclam/",
     "location": "Toxic Disco Clam",
     "description": "Need an afternoon boost? We have cold brew, coffee-based cocktails, hot tunes!"
+  },
+  {
+    "id": "52466",
+    "title": "Mona Funeral March",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "15:30",
+        "end_time": "19:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "",
+    "campurl": "",
+    "location": "From Center Camp to Mona DIE! DIE! DIE!",
+    "description": "Dress your best pink for Mona’s jazz funeral parade to Mona DIE! DIE! DIE! w/ Mona’s pink coffin, eulogy & performances."
   },
   {
     "id": "52468",
@@ -41876,22 +41708,6 @@
     "campurl": "https://www.facebook.com/PalinkaLounge/",
     "location": "PALINKA LOUNGE",
     "description": "There is no better way to start off your night than with Palinka shots and some Trance"
-  },
-  {
-    "id": "52807",
-    "title": "Deep House Meditation",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "14:00",
-        "end_time": "15:00"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Toxic Disco Clam",
-    "campurl": "https://www.facebook.com/toxicdiscoclam/",
-    "location": "Toxic Disco Clam",
-    "description": "A guided meditation journey set to a deep house backbeat"
   },
   {
     "id": "52808",
@@ -50305,22 +50121,6 @@
     "campurl": "",
     "location": "M.E.L.T.",
     "description": "Come an relax and connect in our fairy forest themed lounge dome, with quite music, and the tinkle of a water fall"
-  },
-  {
-    "id": "53248",
-    "title": "Intuition: Rethinking Education",
-    "times": [
-      {
-        "date": "08/30/2025",
-        "start_time": "13:45",
-        "end_time": "15:00"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Mystic",
-    "campurl": "https://campmystic.org/",
-    "location": "Mystic",
-    "description": "Witness Intuitive Kids reveal a new way of learning in a live demonstration."
   },
   {
     "id": "53249",
@@ -60680,27 +60480,6 @@
     "description": "Come join us for ice cold lemonade and group painting"
   },
   {
-    "id": "53766",
-    "title": "Nomad’s Table",
-    "times": [
-      {
-        "date": "08/28/2025",
-        "start_time": "15:00",
-        "end_time": "17:00"
-      },
-      {
-        "date": "08/30/2025",
-        "start_time": "15:00",
-        "end_time": "17:00"
-      }
-    ],
-    "type": "Food",
-    "camp": "Bohemian Forest",
-    "campurl": "https://www.instagram.com/bohemianforestcamp",
-    "location": "Bohemian ForestTengri Camp, in case it obtains a separate camp placement",
-    "description": "Afternoon meals offering lagman, a traditional Central Asian dish with beef and noodles, and chicken with rice"
-  },
-  {
     "id": "53767",
     "title": "Wild at Heart: Nature and Biodiversity Journey",
     "times": [
@@ -61311,22 +61090,6 @@
     "description": "Visit portals to new worlds or relax in the best shade this timeline can offer."
   },
   {
-    "id": "53797",
-    "title": "Sultry Tea & Coffee Breakfast!",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "10:30",
-        "end_time": "12:30"
-      }
-    ],
-    "type": "Food",
-    "camp": "The Sultry Lodge",
-    "campurl": "https://www.facebook.com/sultry.lodge/",
-    "location": "The Sultry Lodge",
-    "description": "Reinvigorate after a sultry night with fresh & hot sandwiches with cheese, ham, salami & veggies. Hot tea & coffee too."
-  },
-  {
     "id": "53798",
     "title": "The Art of Happiness",
     "times": [
@@ -61638,22 +61401,6 @@
     "description": "Play while embracing your inner child through laughter yoga and gentle conscious flow of blindfold dance"
   },
   {
-    "id": "53814",
-    "title": "Contact Impro X Ecstatic Dance",
-    "times": [
-      {
-        "date": "08/27/2025",
-        "start_time": "14:00",
-        "end_time": "16:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "Cold Yogis",
-    "campurl": "http://www.coldyogis.org/",
-    "location": "Cold Yogis",
-    "description": "Unique sonic journey bridging intimate connection with ecstatic movement. Live looping and instruments."
-  },
-  {
     "id": "53816",
     "title": "Builder's Brunch",
     "times": [
@@ -61796,22 +61543,6 @@
     "campurl": "",
     "location": "Playfully Yours Village",
     "description": "Party and play with us- music, cocktails, spankings & connection!"
-  },
-  {
-    "id": "53826",
-    "title": "Kundalini Awakening - Yoga, Meditation and Breath",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "07:00",
-        "end_time": "08:00"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Cold Yogis",
-    "campurl": "http://www.coldyogis.org/",
-    "location": "Cold Yogis",
-    "description": "We blend Kundalini Yoga, guided meditation, and breathwork to awaken your energy & reconnect you with your innerfire"
   },
   {
     "id": "53827",
@@ -62118,22 +61849,6 @@
     "description": "Suns Out, Buns Out: A wild daytime dance party with sun, beats, and no rules!"
   },
   {
-    "id": "53841",
-    "title": "Psychedelic Research Professional Updates",
-    "times": [
-      {
-        "date": "08/29/2025",
-        "start_time": "17:30",
-        "end_time": "19:00"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Soft Landing",
-    "campurl": "http://www.campsoftlanding.co",
-    "location": "Soft LandingPalenque Norte",
-    "description": "PhD researcher gives the latest update on psychedelic research"
-  },
-  {
     "id": "53842",
     "title": "Tacos Y PlaYa Tech",
     "times": [
@@ -62164,22 +61879,6 @@
     "campurl": "https://www.campexclamationmark.com/",
     "location": "FDA: Food & Dance Administration",
     "description": "A Desert Oasis to Stuff Your Faces. Dance to Playa Tech, Have Tacos."
-  },
-  {
-    "id": "53844",
-    "title": "Artist Chat",
-    "times": [
-      {
-        "date": "08/29/2025",
-        "start_time": "16:00",
-        "end_time": "17:30"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Soft Landing",
-    "campurl": "http://www.campsoftlanding.co",
-    "location": "Soft Landing",
-    "description": "Yearly fireside chat with a secret guest"
   },
   {
     "id": "53845",
@@ -62483,22 +62182,6 @@
     "campurl": "https://www.instagram.com/bloom_camp_/",
     "location": "Bloom Camp",
     "description": "Explore the ancient practice of integration, reconnecting us to nature and community in a fragmented world."
-  },
-  {
-    "id": "53863",
-    "title": "Ecstatic Dance Journey to Collective Joy",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "17:00",
-        "end_time": "19:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "Cold Yogis",
-    "campurl": "http://www.coldyogis.org/",
-    "location": "Cold Yogis",
-    "description": "Unique sonic journey that bridges mindful presence with ecstatic celebration of life in all aspects"
   },
   {
     "id": "53864",
@@ -64844,22 +64527,6 @@
     "campurl": "https://www.hushville.org/",
     "location": "HushvilleThe Crusty Swan",
     "description": "We are the best little bar on the playa!"
-  },
-  {
-    "id": "53974",
-    "title": "Sake s’Moirée",
-    "times": [
-      {
-        "date": "08/27/2025",
-        "start_time": "21:00",
-        "end_time": "23:00"
-      }
-    ],
-    "type": "Food",
-    "camp": "Chez Mirage",
-    "campurl": "",
-    "location": "Chez Mirage",
-    "description": "Groove to funky fireside beats ft. sake shots, sticky s’mores, + sizzlin sets"
   },
   {
     "id": "53975",
@@ -72040,22 +71707,6 @@
     "description": "Booty-approved drinks for those who like it served with extra cheek. Solve our secret drink puzzle and win some crap."
   },
   {
-    "id": "54318",
-    "title": "Serenity Movie Night",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "20:00",
-        "end_time": "23:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "Captain Pump's Raiders",
-    "campurl": "https://www.facebook.com/pumpsraiders/",
-    "location": "Captain Pump's Raiders",
-    "description": "We'll watch cult Firefly movie + a surprise movie!"
-  },
-  {
     "id": "54319",
     "title": "Magic Draft Tournament",
     "times": [
@@ -72120,27 +71771,6 @@
     "description": "Travel with us to Gamehendge as we jam to an evening of live Phish!"
   },
   {
-    "id": "54324",
-    "title": "The Ethnic Mode Fashion Show",
-    "times": [
-      {
-        "date": "08/28/2025",
-        "start_time": "15:00",
-        "end_time": "17:00"
-      },
-      {
-        "date": "08/30/2025",
-        "start_time": "15:00",
-        "end_time": "17:00"
-      }
-    ],
-    "type": "Arts & Crafts",
-    "camp": "Bohemian Forest",
-    "campurl": "https://www.instagram.com/bohemianforestcamp",
-    "location": "Bohemian ForestTengri Camp, in case of a separate camp placement",
-    "description": "\"A nomadic-inspired fashion performance showcasing handmade ceremonial garments rooted in Central Asian heritage"
-  },
-  {
     "id": "54325",
     "title": "Altered Book Making with Vintage Sci-Fi",
     "times": [
@@ -72171,27 +71801,6 @@
     "campurl": "https://www.facebook.com/BrandURAss",
     "location": "Brand-Ur-Ass N More",
     "description": "Buckaroos, Buckarettes, and Buckeralls, let’s toast to unregrettable decisions!"
-  },
-  {
-    "id": "54327",
-    "title": "Live ethno-techno music",
-    "times": [
-      {
-        "date": "08/28/2025",
-        "start_time": "15:00",
-        "end_time": "17:00"
-      },
-      {
-        "date": "08/30/2025",
-        "start_time": "15:00",
-        "end_time": "17:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "Bohemian Forest",
-    "campurl": "https://www.instagram.com/bohemianforestcamp",
-    "location": "Bohemian ForestTengri Camp",
-    "description": "Featuring a live DJ set by DJ Daniella blending ethnic instruments with modern techno"
   },
   {
     "id": "54328",
@@ -73816,22 +73425,6 @@
     "description": "Participate as an Artist or a Canvas. We provide Body Paint, Stencils, and Temporary Tattoos."
   },
   {
-    "id": "54415",
-    "title": "Sunday, Kickoff Party with Open Mic and Live Music",
-    "times": [
-      {
-        "date": "08/24/2025",
-        "start_time": "20:00",
-        "end_time": "22:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "Black Rock Piano Lounge",
-    "campurl": "https://www.instagram.com/meltonjohnartcar/",
-    "location": "Black Rock Piano Lounge",
-    "description": "Swing by to enjoy our talent or come share your god given musical gifts with the rest of us to celebrate coming home!"
-  },
-  {
     "id": "54416",
     "title": "Monday, Drink and Draw Live Nude Sketching, 1pm to",
     "times": [
@@ -73883,22 +73476,6 @@
     "campurl": "https://www.instagram.com/meltonjohnartcar/",
     "location": "Black Rock Piano Lounge",
     "description": "A nutritional breakfast/hangover cure all in one, served by Baywatch bartenders with a healthy dose of live music."
-  },
-  {
-    "id": "54419",
-    "title": "Open Heart: A Journey into Authentic Connection",
-    "times": [
-      {
-        "date": "08/27/2025",
-        "start_time": "11:00",
-        "end_time": "13:00"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Black Rock Piano Lounge",
-    "campurl": "https://www.instagram.com/meltonjohnartcar/",
-    "location": "Black Rock Piano Lounge",
-    "description": "Explore what gets in the way of intimacy. This workshop uses Feeding Your Demons—a meditation rooted in Tibetan Buddhism"
   },
   {
     "id": "54420",
@@ -74972,22 +74549,6 @@
     "description": "Climb our high chair bar, grab a drink and share the stories you just can’t tell anywhere else with the Esplanade."
   },
   {
-    "id": "54477",
-    "title": "Tea Dance",
-    "times": [
-      {
-        "date": "08/27/2025",
-        "start_time": "15:00",
-        "end_time": "18:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "Cockpit",
-    "campurl": "",
-    "location": "Cockpit",
-    "description": "Be transported to Fire Island Playa with a traditional afternoon tea dance - cocktails and good old pop and disco music."
-  },
-  {
     "id": "54478",
     "title": "The (Un)official Taylor Party",
     "times": [
@@ -75496,22 +75057,6 @@
     "description": "A practical guide to the use of psychedelics as a tool for personal development."
   },
   {
-    "id": "54501",
-    "title": "The 7-38-55 Rule. How to beat AI speak!",
-    "times": [
-      {
-        "date": "08/29/2025",
-        "start_time": "15:00",
-        "end_time": "16:00"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Mystic",
-    "campurl": "https://campmystic.org/",
-    "location": "Mystic",
-    "description": "AI is hijacking human behavior. Learn how to reclaim the human touch."
-  },
-  {
     "id": "54502",
     "title": "Discover Your Animal Spirit Ceremony",
     "times": [
@@ -75526,22 +75071,6 @@
     "campurl": "https://campmystic.org/",
     "location": "Mystic",
     "description": "A journey to discover your Animal Spirit Guide through shamanic practices."
-  },
-  {
-    "id": "54503",
-    "title": "Guru Puja – A Sacred Ritual of Gratitude",
-    "times": [
-      {
-        "date": "08/29/2025",
-        "start_time": "17:00",
-        "end_time": "18:00"
-      }
-    ],
-    "type": "Other",
-    "camp": "Mystic",
-    "campurl": "https://campmystic.org/",
-    "location": "Mystic",
-    "description": "A Vedic puja ceremony for peace & harmony (chanting, singing, and meditation)."
   },
   {
     "id": "54504",
@@ -76288,22 +75817,6 @@
     "campurl": "",
     "location": "Whiskey Division",
     "description": "Come sing with us! Come with your favorite song or come not knowing any! All skill levels!"
-  },
-  {
-    "id": "54541",
-    "title": "Penthouse Pour Overs",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "09:00",
-        "end_time": "12:00"
-      }
-    ],
-    "type": "Beverages",
-    "camp": "EBB & Glow Village",
-    "campurl": "https://www.facebook.com/groups/ebbandglow",
-    "location": "EBB & Glow Village",
-    "description": "Come enjoy the best coffee with the best view on playa. Find us on the sky deck!"
   },
   {
     "id": "54542",
@@ -78174,22 +77687,6 @@
     "description": "Morning yoga! Greet the solar deity and move your as(anas)."
   },
   {
-    "id": "54645",
-    "title": "Song of the Day",
-    "times": [
-      {
-        "date": "08/25/2025",
-        "start_time": "10:45",
-        "end_time": "11:00"
-      }
-    ],
-    "type": "Music/Party",
-    "camp": "Salon Soleil",
-    "campurl": "",
-    "location": "Salon Soleil",
-    "description": "The 4:30 Sector's famed mid-morning microparty. Global beats, eclectic genres across time and space. 10:42 am SHARP!"
-  },
-  {
     "id": "54646",
     "title": "Sound Temple with Crystal Singing Bowls",
     "times": [
@@ -79600,22 +79097,6 @@
     "description": "Make a beautiful lantern out of a Gourd!"
   },
   {
-    "id": "54716",
-    "title": "Church of Cage Cagelujah Chorus - Open Choir Call",
-    "times": [
-      {
-        "date": "08/27/2025",
-        "start_time": "16:45",
-        "end_time": "18:45"
-      }
-    ],
-    "type": "Other",
-    "camp": "Playa SurReal ID",
-    "campurl": "",
-    "location": "Playa SurReal ID",
-    "description": "Join our choir! Sing in our sermon! Hallelujah Chorus with lyrics changed to Nic Cage. Sermon 5:45pm @ Thunderdome."
-  },
-  {
     "id": "54717",
     "title": "Center Camp Speaker Series: Tandem Evolution",
     "times": [
@@ -80468,22 +79949,6 @@
     "description": "Explore BRC! 3 Different Levels: Virgin, BRC Citizen, & Fuck Yer Burn. PRIZES!!"
   },
   {
-    "id": "54759",
-    "title": "Radical Intimacy Workshop",
-    "times": [
-      {
-        "date": "08/28/2025",
-        "start_time": "13:30",
-        "end_time": "15:00"
-      }
-    ],
-    "type": "Class/Workshop",
-    "camp": "Salon Soleil",
-    "campurl": "",
-    "location": "Salon Soleil",
-    "description": "We guide couples through questions that lead from vulnerability to intimacy, understanding, and togetherness."
-  },
-  {
     "id": "54760",
     "title": "Black-Light Art Show, Firepit Chill, Music",
     "times": [
@@ -81249,37 +80714,6 @@
     "campurl": "https://nobohouse.camp",
     "location": "Nobo House",
     "description": "Awaken strength, flexibility & presence. Explore fluid mobility, connect to your body!"
-  },
-  {
-    "id": "54805",
-    "title": "Cold Fission Ice Cream",
-    "times": [
-      {
-        "date": "08/26/2025",
-        "start_time": "12:00",
-        "end_time": "14:00"
-      },
-      {
-        "date": "08/27/2025",
-        "start_time": "12:00",
-        "end_time": "14:00"
-      },
-      {
-        "date": "08/28/2025",
-        "start_time": "12:00",
-        "end_time": "14:00"
-      },
-      {
-        "date": "08/29/2025",
-        "start_time": "12:00",
-        "end_time": "14:00"
-      }
-    ],
-    "type": "Food",
-    "camp": "Atom Cult",
-    "campurl": "http://www.atomcult.com/",
-    "location": "Atom Cult",
-    "description": "What would be better than a scoop of ice cream in the middle of a hot afternoon? In many flavors & waffle cones!"
   },
   {
     "id": "54806",
@@ -83839,5 +83273,2738 @@
     "campurl": "",
     "location": "Soon to be Infamous",
     "description": "Don’t lose your bike in the dust! Decorate a flag, choose a color LED light string, and we’ll install it on your bike!"
+  },
+  {
+    "id": "54956",
+    "title": "Ram Dass Dance Party",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "18:00",
+        "end_time": "19:30"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Ram Dass speeches sampled into messages and performed live to danceable music in our 2000 sq ft Movement Tent"
+  },
+  {
+    "id": "54957",
+    "title": "Relationship Yoga: Practice of Love Realization",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "07:30",
+        "end_time": "08:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "classical Tantra inspired pranayama (breath-work), kriya yoga, and neo-tantrik relational exercises (non-sexual)"
+  },
+  {
+    "id": "54958",
+    "title": "High Tea: Fantasy Tea Party",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "10:00",
+        "end_time": "11:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "",
+    "campurl": "",
+    "location": "Center Camp Creation Station",
+    "description": "Here is the tea! The tea is real. The vibe is pure imagination."
+  },
+  {
+    "id": "54959",
+    "title": "Soul Motion; Yoga and Live Music",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "09:00",
+        "end_time": "10:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "A soulful, music-infused yoga class with live music. Expect breath, movement, stillness, and sound to guide you inward"
+  },
+  {
+    "id": "54960",
+    "title": "High Tea: Fantasy Tea Party",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "17:00",
+        "end_time": "18:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "",
+    "campurl": "",
+    "location": "Center Camp Creation Station",
+    "description": "Wander in for some tea & tea spilling—games, snacks, & a Regency era TTRPG."
+  },
+  {
+    "id": "54961",
+    "title": "Dice Roller Soldering Workshop",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "13:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Captain Pump's Raiders",
+    "campurl": "https://www.facebook.com/pumpsraiders/",
+    "location": "Captain Pump's Raiders",
+    "description": "Learn the basics of soldering electronics & make a dice roller! No exp necessary"
+  },
+  {
+    "id": "54962",
+    "title": "Big Easy Grilled Cheesy",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "11:00",
+        "end_time": "00:00"
+      }
+    ],
+    "type": "Food",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Share your cheasiest story while eating a buttery good grilled cheese sandwich. Bonus points if your story involves NOLA"
+  },
+  {
+    "id": "54963",
+    "title": "Kundalini Yoga with 20 min Sound Bath (Frank)",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "09:30",
+        "end_time": "10:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Kriya Yoga with Mundra, Mantra & Sound Bathl"
+  },
+  {
+    "id": "54964",
+    "title": "Adventurer's Leathercraft Workshop",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "17:00",
+        "end_time": "20:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Captain Pump's Raiders",
+    "campurl": "https://www.facebook.com/pumpsraiders/",
+    "location": "Captain Pump's Raiders",
+    "description": "Design and craft your own leather gear with guidance and materials provided."
+  },
+  {
+    "id": "54965",
+    "title": "Gentle & Therapeutic Yoga (Rachael)",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "11:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Relax and unwind your body, mind and soul. Feel restored, renewed & ready for more!"
+  },
+  {
+    "id": "54966",
+    "title": "Sweet Desert Balls",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "10:30",
+        "end_time": "11:30"
+      }
+    ],
+    "type": "Food",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Tasty \"sweet hummus\" chocolate and peanut butter balls served chilled! Healthy and delicious."
+  },
+  {
+    "id": "54967",
+    "title": "DJ Chroma Dust & Mocktails",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "13:30",
+        "end_time": "15:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "DJ Chromadust & Mocktails: DJ Chromadust will make your body move. Enjoy a tasty mocktail while you dance."
+  },
+  {
+    "id": "54968",
+    "title": "The Upcycled Fashion Show and Mutant Clothing Expe",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "13:00",
+        "end_time": "15:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "AdramaNation and the Reno Housewives welcome you to shop the housewives’ boutique or bring in your own clothes to let us"
+  },
+  {
+    "id": "54969",
+    "title": "DJ Vibes by Heros",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "12:00",
+        "end_time": "13:30"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Dance our 2000 sq foot padded floor under the big top on the Esplanade, while viewing the expansive Playa"
+  },
+  {
+    "id": "54970",
+    "title": "Wearable Playa Keepsake",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "12:00",
+        "end_time": "13:30"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "The focus of this workshop is to make unique playa jewelry (necklaces and earrings) with mini gems and trinkets"
+  },
+  {
+    "id": "54971",
+    "title": "Smoothies",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "11:30",
+        "end_time": "13:30"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Need some relief from the heat? Sip on a delicious cold smoothie and re-energize."
+  },
+  {
+    "id": "54972",
+    "title": "Truffle Mac & Cheese",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "11:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Food",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Need a little comfort food? Come enjoy some ooey gooey cheesy truffle deliciousness."
+  },
+  {
+    "id": "54973",
+    "title": "Sing Along with Sinatra Martini Bar",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "16:00",
+        "end_time": "18:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Martinis, with olives, and blaring Frank Sinatra music with lyric sheets so we can all sing along with him."
+  },
+  {
+    "id": "54974",
+    "title": "Aperol Spritzers",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "12:00",
+        "end_time": "13:30"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Wet your whistle with a refreshing aperol spritzer. Stay for our Mardi Gras dance party."
+  },
+  {
+    "id": "54975",
+    "title": "Fat Tuesday Happy Hour",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "12:00",
+        "end_time": "13:30"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Celebrate Fat Tuesday New Orleans style. Straight from the parade route, we have Mardi Gras cup with tasty cocktail."
+  },
+  {
+    "id": "54976",
+    "title": "Big Easy Grilled Cheesy",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "11:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Food",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "share your cheasiest story while eating a buttery good grilled cheese sandwich. Bonus points if your story involves NOLA"
+  },
+  {
+    "id": "54977",
+    "title": "Grape Escape Wine Tasting",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "17:00",
+        "end_time": "19:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Sip some wine while the sun kisses the sky."
+  },
+  {
+    "id": "54978",
+    "title": "Smoothies",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "11:30",
+        "end_time": "13:30"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Need some relief from the heat? Sip on a delicious cold smoothie and re-energize."
+  },
+  {
+    "id": "54979",
+    "title": "Bean Picadillo Tapas",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "11:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Food",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Tasty vegetarian fare to share on a hot day. Come for an appetizer and stay to meet some new friends."
+  },
+  {
+    "id": "54980",
+    "title": "Grape Escape Wine Tasting",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "19:30",
+        "end_time": "20:30"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Sip some wine while the sun kisses the sky."
+  },
+  {
+    "id": "54981",
+    "title": "Take One / Leave One",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "00:00",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/25/2025",
+        "start_time": "00:00",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "00:00",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "00:00",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "00:00",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "00:00",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "00:00",
+        "end_time": "23:45"
+      }
+    ],
+    "type": "Other",
+    "camp": "AdramaNation",
+    "campurl": "https://camp-adramanation.squarespace.com/",
+    "location": "AdramaNation",
+    "description": "Reach into our box to Deposit or receive surprise."
+  },
+  {
+    "id": "54982",
+    "title": "Sonic Somatics & Dance Alchemy (Chaila)",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "13:30",
+        "end_time": "14:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Discover your inner landscape through breath, voice, movement & visualization"
+  },
+  {
+    "id": "54983",
+    "title": "Finding your Authentic Voice (Tiki Tyler)",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "15:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Find your authentic voice with ancient & modern vocal techniques from a pro coach"
+  },
+  {
+    "id": "54984",
+    "title": "Soul Motion: Yoga & Live Music (Martine)",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "09:00",
+        "end_time": "10:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Soulful yoga with live music—breath, movement & sound guide you inward to yourself"
+  },
+  {
+    "id": "54985",
+    "title": "Latin/Brazil Funk/Afro & Org Tech/Deep Hse",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "11:00",
+        "end_time": "12:30"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Unique beats in the desert—uncommon sounds to get you dancing all week."
+  },
+  {
+    "id": "54987",
+    "title": "Cosmic Yoga & Dance with Krystal Dragonwagon",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "19:30",
+        "end_time": "21:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Cosmic yoga & dance—earth-rooted, star-bound, live beats, soundscapes & magic"
+  },
+  {
+    "id": "54989",
+    "title": "BURNING MANTRA KIRTAN",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "09:00",
+        "end_time": "10:45"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Join an international all--star line up for a deep dive in devotion through kirtan."
+  },
+  {
+    "id": "54991",
+    "title": "Soothing Handpan & Guitar Session",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "15:30",
+        "end_time": "16:30"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Join PooMi for soothing guitar & handpan—calming rhythms to relax and connect within."
+  },
+  {
+    "id": "54992",
+    "title": "Bhakti Yoga: Immersion Into Devotion",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "08:00",
+        "end_time": "09:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Discover joyful Devotion Yoga & its roots with Vedic Kirtan Master Raamayan from India"
+  },
+  {
+    "id": "54994",
+    "title": "Arctic Vibes: Dynamic Techno Set by Polar",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "21:00",
+        "end_time": "23:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Dynamic, danceable techno with big drops & Arctic-inspired vibes for an unforgettable set. Ask ChatGPT"
+  },
+  {
+    "id": "54995",
+    "title": "Therapeutic Yoga to Deep House",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "11:00",
+        "end_time": "12:15"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "A journey through gentle and therapeutic yoga to tribal deep house music to relax your body, mind and soul."
+  },
+  {
+    "id": "54996",
+    "title": "Vino e Vibes - slip slow, by Lady Gabby",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "19:00",
+        "end_time": "20:30"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "A slow, sensory gathering with natural wine, shared bites, and good conversation. Come as you are. Leave a little softer"
+  },
+  {
+    "id": "54997",
+    "title": "Ancient Future: Codes of Remembrance & Creation",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "13:30",
+        "end_time": "14:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Explore the feminine way of sacred creation, ancient wisdom & regenerative artistry."
+  },
+  {
+    "id": "54998",
+    "title": "Sound Bath Therapy  for the Soul",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "15:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Sound Bath with Tibetan Bowls, Gongs, and More, by Frank"
+  },
+  {
+    "id": "54999",
+    "title": "Drum Circle, led by Frank",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "19:00",
+        "end_time": "20:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Drumming to Connect with your Bio Rhythm"
+  },
+  {
+    "id": "55000",
+    "title": "Ram Dass Dance Party!",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "19:00",
+        "end_time": "20:30"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Ram Dass speeches sampled into messages and performed live to danceable music."
+  },
+  {
+    "id": "55001",
+    "title": "BEING w/ RAM DASS, by Krishna Prem",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "20:00",
+        "end_time": "22:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Time for Ram Dass stories and reflection. By Krishna Prem"
+  },
+  {
+    "id": "55002",
+    "title": "GaiaDome: Late-Night Tea Haven",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "15:00",
+        "end_time": "02:00"
+      },
+      {
+        "date": "08/25/2025",
+        "start_time": "15:00",
+        "end_time": "02:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "15:00",
+        "end_time": "02:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "15:00",
+        "end_time": "02:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "15:00",
+        "end_time": "02:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "15:00",
+        "end_time": "02:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "15:00",
+        "end_time": "02:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Late-night jungle tea lounge, calm escape from the frenetic playa energy."
+  },
+  {
+    "id": "55003",
+    "title": "GaiaDome: Morning Coffee Refuge",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "07:00",
+        "end_time": "14:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Morning coffee in our cool jungle dome—ease into the day away from playa chaos."
+  },
+  {
+    "id": "55004",
+    "title": "Turkish Coffee Grounds Reading",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "07:00",
+        "end_time": "14:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "07:00",
+        "end_time": "14:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "07:00",
+        "end_time": "14:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "07:00",
+        "end_time": "14:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "07:00",
+        "end_time": "14:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "07:00",
+        "end_time": "14:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Sip, swirl, and discover messages hidden in your cup’s coffee grounds."
+  },
+  {
+    "id": "55005",
+    "title": "GaiaDome: Tea, Coffee & Connection",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "16:00",
+        "end_time": "03:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "16:00",
+        "end_time": "03:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "16:00",
+        "end_time": "03:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "16:00",
+        "end_time": "03:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "16:00",
+        "end_time": "03:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "16:00",
+        "end_time": "03:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "A day-and-night haven for tea, coffee, and heartfelt conversations."
+  },
+  {
+    "id": "55006",
+    "title": "Be Here Now: Ram Dass Stories & Art",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "17:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "17:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "17:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "17:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "17:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "17:00",
+        "end_time": "18:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Share dharma, art, films & stories of Ram Dass in a meditative space. Curated by a group fr Love Serve Remember"
+  },
+  {
+    "id": "55007",
+    "title": "Paint Your Elephant",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "15:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/25/2025",
+        "start_time": "15:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "15:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "15:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "15:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "15:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "15:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/31/2025",
+        "start_time": "15:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Embrace your inner artist and paint an elephant - personal-sized 7\" laser cut wood cutout. All materials provided!"
+  },
+  {
+    "id": "55008",
+    "title": "Elephant Mist - Best Power Misting",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/25/2025",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      },
+      {
+        "date": "08/31/2025",
+        "start_time": "12:00",
+        "end_time": "18:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Best misting system on the Playa! Burner favorite for 15 years! Be misted, hang out, paint elephants, or enjoy workshops"
+  },
+  {
+    "id": "55009",
+    "title": "Elephant Mosaic painted by 144 kids of Bali",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "15:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/25/2025",
+        "start_time": "15:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "15:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "15:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "15:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "15:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "15:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/31/2025",
+        "start_time": "15:00",
+        "end_time": "00:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Painted for the Burn, 144 kids of Ubud, Bali painted this mosaic, as led S. Bennett, a gifted international artist"
+  },
+  {
+    "id": "55010",
+    "title": "Elephant Fun Facts",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "17:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/25/2025",
+        "start_time": "17:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "17:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "17:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "17:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "17:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "17:00",
+        "end_time": "12:00"
+      },
+      {
+        "date": "08/31/2025",
+        "start_time": "17:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Kids Activities",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "A multitude of displays will educate you about the most unique, and often unknown, facts about Asian elephants"
+  },
+  {
+    "id": "55011",
+    "title": "Asian Elephant Conservation, presented by founder",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "09:30",
+        "end_time": "11:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Using Incentive based and Entrepreneurial approaches, effective conservation goals can be achieved, Philip Price"
+  },
+  {
+    "id": "55012",
+    "title": "Costume Giveaway!",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "14:00",
+        "end_time": "18:30"
+      }
+    ],
+    "type": "Other",
+    "camp": "Apokalyptika",
+    "campurl": "https://www.kampapokalyptika.com/",
+    "location": "Apokalyptika",
+    "description": "Need to freshen up your fit? Come dive into our costume bin and emerge as your sexy better dressed self!"
+  },
+  {
+    "id": "55013",
+    "title": "Acro Jam & Iced Coffee",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "16:00",
+        "end_time": "18:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Acrobatica Galactica",
+    "campurl": "",
+    "location": "Acrobatica Galactica",
+    "description": "Includes spotting belt with lines, mats, shade structure fit for standing acro, belly laughs"
+  },
+  {
+    "id": "55014",
+    "title": "Wonderful world of caves",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "20:30",
+        "end_time": "22:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "Hibernaculum",
+    "campurl": "",
+    "location": "Hibernaculum",
+    "description": "Presenting 3 stunning sound/music shows: Under the Earth in a Crystal Pool, Great Caves of the World, Erotic Underground"
+  },
+  {
+    "id": "55015",
+    "title": "Keeping it Wheel OneWheel Boot camp",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "16:00",
+        "end_time": "18:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "EBB & Glow Village",
+    "campurl": "https://www.facebook.com/groups/ebbandglow",
+    "location": "EBB & Glow Village",
+    "description": "Get started with riding OneWheel safely in 1-to-1 lessons with a seasoned coach. Obstacle parkours for advanced riders."
+  },
+  {
+    "id": "55016",
+    "title": "OneWheel Chair group ride",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "17:00",
+        "end_time": "19:30"
+      }
+    ],
+    "type": "Other",
+    "camp": "EBB & Glow Village",
+    "campurl": "https://www.facebook.com/groups/ebbandglow",
+    "location": "EBB & Glow Village",
+    "description": "We are mobbing deep playa on our OneWheel chair/contraptions and making fun of ourselves, seriously!"
+  },
+  {
+    "id": "55017",
+    "title": "GLOWMEUP: glow-in-the-dark body & face painting",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "19:30",
+        "end_time": "21:30"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "EBB & Glow Village",
+    "campurl": "https://www.facebook.com/groups/ebbandglow",
+    "location": "EBB & Glow Village",
+    "description": "Let us illuminate your night with vibrant, glow-in-the-dark body & face painting. Find us on the Skydeck."
+  },
+  {
+    "id": "55018",
+    "title": "GLOWMEUP: glow-in-the-dark body & face painting",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "18:00",
+        "end_time": "20:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "EBB & Glow Village",
+    "campurl": "https://www.facebook.com/groups/ebbandglow",
+    "location": "EBB & Glow Village",
+    "description": "Let us illuminate your night with vibrant, glow-in-the-dark body & face painting. Find us in the Piano Bar or on Skydeck"
+  },
+  {
+    "id": "55019",
+    "title": "GLOWMEUP: glow-in-the-dark body & face painting",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "19:00",
+        "end_time": "21:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "EBB & Glow Village",
+    "campurl": "https://www.facebook.com/groups/ebbandglow",
+    "location": "EBB & Glow Village",
+    "description": "Let us illuminate your night with vibrant, glow-in-the-dark body & face painting. On Skydeck or in the Piano Bar"
+  },
+  {
+    "id": "55020",
+    "title": "GLOWMEUP: glow-in-the-dark body & face painting",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "19:00",
+        "end_time": "21:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "EBB & Glow Village",
+    "campurl": "https://www.facebook.com/groups/ebbandglow",
+    "location": "EBB & Glow Village",
+    "description": "Let us illuminate your night with vibrant, glow-in-the-dark body & face painting. Find us on Skydeck."
+  },
+  {
+    "id": "55021",
+    "title": "Spirit Animal Adoption/Make your own party totem",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "15:00",
+        "end_time": "19:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "15:00",
+        "end_time": "19:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Camp Corny",
+    "campurl": "https://www.instagram.com/campcorny/",
+    "location": "Camp Corny",
+    "description": "Leap into a pile of 1,000's of stuffed spirit animals, create your totem & dance @ our epic 2-story day club!"
+  },
+  {
+    "id": "55022",
+    "title": "Welcome Home Block Party & Fire Jam",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "22:00",
+        "end_time": "01:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Camp Corny",
+    "campurl": "https://www.instagram.com/campcorny/",
+    "location": "Camp Corny",
+    "description": "25' tall fire-spewing unicorns light our 2-story dance club & a bar run by a bear - FriendliestFuckingCampInTheUniverse"
+  },
+  {
+    "id": "55023",
+    "title": "Darkwad Wednesday Convergence",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "19:00",
+        "end_time": "23:45"
+      }
+    ],
+    "type": "Other",
+    "camp": "",
+    "campurl": "",
+    "location": "El Diabla, the Cauldron @ Center Camp",
+    "description": "Dress in black, meet at the Cauldron, and join a LIGHTS OUT Darkmob adventure!"
+  },
+  {
+    "id": "55024",
+    "title": "Cosmic Shamanic Sound Healing Journey",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "17:00",
+        "end_time": "18:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Mystic",
+    "campurl": "https://campmystic.org/",
+    "location": "Mystic",
+    "description": "Immerse in a magical sound journey into your multidimensional cosmic self."
+  },
+  {
+    "id": "55025",
+    "title": "Cosmic Shamanic Sound Healing Journey",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "15:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Mystic",
+    "campurl": "https://campmystic.org/",
+    "location": "Mystic",
+    "description": "Immerse in a magical sound journey into your multidimensional cosmic self."
+  },
+  {
+    "id": "55026",
+    "title": "Ignite the Night: Beginner Fire Poi Experience",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "19:00",
+        "end_time": "21:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Space Cowboys",
+    "campurl": "https://www.spacecowboys.org/",
+    "location": "Space Cowboys9:45 & G",
+    "description": "From tango to flame—learn poi, spin fire, & take home your own practice set!"
+  },
+  {
+    "id": "55027",
+    "title": "Portal Party at The Love Apothecary",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "16:30",
+        "end_time": "18:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Portals, Potions, and Pleasure",
+    "campurl": "",
+    "location": "Portals, Potions, and Pleasure",
+    "description": "Magical portal party with herbal tincture love potion, unlocking hearts and wonder."
+  },
+  {
+    "id": "55028",
+    "title": "CarBQue Lighting",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "07:30",
+        "end_time": "20:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "Gigsville",
+    "campurl": "",
+    "location": "Gigsville",
+    "description": "Opening the carbeque for the week."
+  },
+  {
+    "id": "55029",
+    "title": "Protest the Man",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "12:00",
+        "end_time": "13:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "Gigsville",
+    "campurl": "",
+    "location": "Gigsville",
+    "description": "Damn the man!! Bring your signs, your megaphones, and your anger. Meet at the bar, march out as a group."
+  },
+  {
+    "id": "55030",
+    "title": "E Block Party",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "13:00",
+        "end_time": "15:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Gigsville",
+    "campurl": "",
+    "location": "GigsvilleE between 4:30 and 4:0",
+    "description": "Gigsville, STOOP, and Blazing Death Ship, it's a neighborhood block party! Yard games, drinks, music"
+  },
+  {
+    "id": "55031",
+    "title": "Inflatable Repair, Reinflation & Adoption Station",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "14:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "Inflatable Wildlife",
+    "campurl": "",
+    "location": "Inflatable Wildlife",
+    "description": "Bring us your damaged inflatables and we’ll patch them up! Browse our inflatable adoption and take home a friend!"
+  },
+  {
+    "id": "55032",
+    "title": "Inflatable Repair, Reinflation & Adoption Station",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "11:00",
+        "end_time": "13:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "Inflatable Wildlife",
+    "campurl": "",
+    "location": "Inflatable Wildlife",
+    "description": "Bring us your damaged inflatables and we’ll patch them up! Browse our inflatable adoption and take home a friend!"
+  },
+  {
+    "id": "55033",
+    "title": "Ass Selfie Workshop",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "09:30",
+        "end_time": "10:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Barbie Death Village",
+    "campurl": "",
+    "location": "Barbie Death VillageDeadbeat Café",
+    "description": "Ride out to deep playa to learn how to capture your best asset! Meet at Deadbeat Cafe"
+  },
+  {
+    "id": "55034",
+    "title": "Musical Monday w Fireball FOMO",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "14:00",
+        "end_time": "17:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Cabana Club",
+    "campurl": "https://www.facebook.com/BlackRockCabanas/",
+    "location": "Cabana Club",
+    "description": "Showtunes sing-along w pitch perfect cocktails, snacks and fireball candy"
+  },
+  {
+    "id": "55035",
+    "title": "Neon Nooner 80s and 90s Bash",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "14:00",
+        "end_time": "17:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Cabana Club",
+    "campurl": "https://www.facebook.com/BlackRockCabanas/",
+    "location": "Cabana Club",
+    "description": "Daytime glow vibes w 80s and 90s dance anthems, pink drinks, and desert fun."
+  },
+  {
+    "id": "55036",
+    "title": "If You Like Piña Coladas",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "14:00",
+        "end_time": "17:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Cabana Club",
+    "campurl": "https://www.facebook.com/BlackRockCabanas/",
+    "location": "Cabana Club",
+    "description": "Smooth yacht rock, disco, cool drinks and desert grooves await you."
+  },
+  {
+    "id": "55037",
+    "title": "Yo! Cabana Club Raps",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "14:00",
+        "end_time": "17:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Cabana Club",
+    "campurl": "https://www.facebook.com/BlackRockCabanas/",
+    "location": "Cabana Club",
+    "description": "Classic hip hop and RnB with cool sips and OG block party dance vibes"
+  },
+  {
+    "id": "55038",
+    "title": "Playa Tropical",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "14:00",
+        "end_time": "17:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Cabana Club",
+    "campurl": "https://www.facebook.com/BlackRockCabanas/",
+    "location": "Cabana Club",
+    "description": "Escape to our desert oasis with international beach vibes and cold cocktails"
+  },
+  {
+    "id": "55039",
+    "title": "Miss Gigsville",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "15:00",
+        "end_time": "16:30"
+      }
+    ],
+    "type": "Mature Audiences",
+    "camp": "Gigsville",
+    "campurl": "",
+    "location": "Gigsville",
+    "description": "The Miss Gigsville pageant! Swimsuit, formal wear, no-talent competitions. All genders encouraged!"
+  },
+  {
+    "id": "55040",
+    "title": "Meditate Deep, Manifest Big",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "10:30",
+        "end_time": "11:30"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "10:30",
+        "end_time": "11:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Cabana Club",
+    "campurl": "https://www.facebook.com/BlackRockCabanas/",
+    "location": "Cabana Club",
+    "description": "Start your day with balance, peace & clarity at our morning meditation"
+  },
+  {
+    "id": "55041",
+    "title": "Swing Lessons w Dance Party",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "21:00",
+        "end_time": "00:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Cabana Club",
+    "campurl": "https://www.facebook.com/BlackRockCabanas/",
+    "location": "Cabana Club",
+    "description": "Learn to swing, jitterbug and jive to the most swingin’ beats from all eras"
+  },
+  {
+    "id": "55042",
+    "title": "Pink Floyd Listening Party",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "21:00",
+        "end_time": "01:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Cabana Club",
+    "campurl": "https://www.facebook.com/BlackRockCabanas/",
+    "location": "Cabana Club",
+    "description": "A full night of Floyd back to back starting with early years through The Wall"
+  },
+  {
+    "id": "55043",
+    "title": "b-movie reverse pitch feast",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "15:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "Burning Man Studios",
+    "campurl": "http://www.burningmanstudios.com",
+    "location": "Burning Man Studios",
+    "description": "Come with your worst movie idea or cheesiest Title and help our studio orally write it, mad scientist style"
+  },
+  {
+    "id": "55044",
+    "title": "Over the Top arm Wrestling Contest",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "13:00",
+        "end_time": "14:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "Burning Man Studios",
+    "campurl": "http://www.burningmanstudios.com",
+    "location": "Burning Man Studios",
+    "description": "Get your biceps, trucker hats, and best Stallone impression ready. It's time to arm wrestle!!"
+  },
+  {
+    "id": "55045",
+    "title": "Flannagan’s Pub Opening Party",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "00:00",
+        "end_time": "03:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Mission Country Club",
+    "campurl": "http://missioncountryclub.com",
+    "location": "Mission Country Club",
+    "description": "Join us at everyone’s favorite late-night dive bar to kick off our first night!"
+  },
+  {
+    "id": "55046",
+    "title": "Taylor Swift Opening Concert",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "20:00",
+        "end_time": "21:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Black Rock Piano Lounge",
+    "campurl": "https://www.instagram.com/meltonjohnartcar/",
+    "location": "Black Rock Piano Lounge",
+    "description": "Swifties skip on over to hear your favorite Taylor live renditions!"
+  },
+  {
+    "id": "55047",
+    "title": "Rumi’s Lounge: Chai, Poetry & Music; Ram Dass Dome",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "22:00",
+        "end_time": "02:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "22:00",
+        "end_time": "02:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Chai, candles, Indian music & divine love poetry in an intimate, romantic space. In the Ram Dass Dome at Elephant Camp"
+  },
+  {
+    "id": "55048",
+    "title": "Ram Dass Dome: Dharma, Stories & Film",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "10:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "10:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "10:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "10:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "10:00",
+        "end_time": "00:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "10:00",
+        "end_time": "00:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Step inside for dharma tales, his life film, chai in Rumi’s lounge & chats with MAPs. Visit our Gaia Dome next door too!"
+  },
+  {
+    "id": "55049",
+    "title": "GaiaDome: Sip, Flirt & Trip (on Art!)",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "06:30",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "06:30",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "06:30",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "06:30",
+        "end_time": "23:45"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "06:30",
+        "end_time": "23:45"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Jungle Aya vibes, Martina Hoffmann & Robert Venosa art, late coffee/tea & date decks for playful chats."
+  },
+  {
+    "id": "55050",
+    "title": "Sacred Connection: Medicine of Authentic Relating",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "11:30",
+        "end_time": "13:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Learn accessible tools to transform and deepen the connection with your friends, family and loved ones."
+  },
+  {
+    "id": "55051",
+    "title": "Chanting The Name, Kirtan w/ KRISHNAPREM",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "15:00",
+        "end_time": "16:15"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "KRISHNAPREM learned chanting from Ram Dass; come sing, chant, and bathe in Unconditional Love in the Dome"
+  },
+  {
+    "id": "55052",
+    "title": "Cincinnati Cheese Coneys",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "19:00",
+        "end_time": "20:00"
+      }
+    ],
+    "type": "Food",
+    "camp": "Sunrise Diner",
+    "campurl": "http://sunrisedinerbrc.com",
+    "location": "Sunrise Diner",
+    "description": "A Cincinnati diner tradition! Genuine Cinci Cheese Coney at the Sunrise Diner."
+  },
+  {
+    "id": "55053",
+    "title": "Rational Fortunetelling",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "15:30",
+        "end_time": "16:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Salon Soleil",
+    "campurl": "",
+    "location": "Salon Soleil",
+    "description": "The Kipper deck holds 36 archetypes. Work through the combinations with the Master Diviner. What's in the cards for you?"
+  },
+  {
+    "id": "55054",
+    "title": "Pendulum Rewired",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "15:00",
+        "end_time": "16:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Salon Soleil",
+    "campurl": "",
+    "location": "Salon Soleil",
+    "description": "Oscillate, concentrate: From rational mind to gut instinct and back. Keep an ear out for the \"quiet voice\"..."
+  },
+  {
+    "id": "55055",
+    "title": "Negotiation as Seduction",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "15:00",
+        "end_time": "16:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Salon Soleil",
+    "campurl": "",
+    "location": "Salon Soleil",
+    "description": "We all negotiate daily...even with ourselves. Learn to transform tension into playful connection."
+  },
+  {
+    "id": "55056",
+    "title": "Enter the Dharma of Ram Dass, by Rammayan",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "17:00",
+        "end_time": "17:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "The wisdom of Ram Dass, as experienced first hand by Rammayan Held in the Love, Serve, Remember space"
+  },
+  {
+    "id": "55057",
+    "title": "Mindful Morning Musings, Ram Dass Dome, by Gagan",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "09:00",
+        "end_time": "10:30"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "09:00",
+        "end_time": "10:30"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "09:00",
+        "end_time": "10:30"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "09:00",
+        "end_time": "10:30"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "09:00",
+        "end_time": "10:30"
+      },
+      {
+        "date": "08/31/2025",
+        "start_time": "09:00",
+        "end_time": "10:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Mindful Morning Musings: Guided Reflections at the Ram Dass Dome, led by Gagan oF Love, Serve, Remember"
+  },
+  {
+    "id": "55058",
+    "title": "Be Here Now Reflections with Ram Dass Dharma",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "15:30",
+        "end_time": "17:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "15:30",
+        "end_time": "17:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "15:30",
+        "end_time": "17:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "15:30",
+        "end_time": "17:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "15:30",
+        "end_time": "17:00"
+      },
+      {
+        "date": "08/30/2025",
+        "start_time": "15:30",
+        "end_time": "17:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "I Love Elephants",
+    "campurl": "",
+    "location": "I Love Elephants",
+    "description": "Be Here Now Reflections: Exploring the Teachings and Dharma Legacy of Ram Dass"
+  },
+  {
+    "id": "55059",
+    "title": "Dusty Straight Edge Hour",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "12:30",
+        "end_time": "13:30"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Planned Playahood",
+    "campurl": "http://www.plannedplayahood.org/",
+    "location": "Planned Playahood",
+    "description": "Straight edge hardcore punk rock from NY and beyond. No songs over 3 minutes."
+  },
+  {
+    "id": "55060",
+    "title": "Pre-registration: Merge Into Gaia NOW",
+    "times": [
+      {
+        "date": "08/24/2025",
+        "start_time": "11:15",
+        "end_time": "12:15"
+      }
+    ],
+    "type": "Other",
+    "camp": "",
+    "campurl": "",
+    "location": "The Singularity Tree",
+    "description": "Screening access to permanent collective merge. Your last chance to stay you."
+  },
+  {
+    "id": "55061",
+    "title": "Annie Oak : Leading Edge Risk Reduction",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "15:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Soft Landing",
+    "campurl": "http://www.campsoftlanding.co",
+    "location": "Soft Landing",
+    "description": "Leading Edge Risk Reduction: Best Practices From Events and Communities Around the Word"
+  },
+  {
+    "id": "55062",
+    "title": "Trust Falls for Grown-Ups : Acro Yoga 101",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "14:00",
+        "end_time": "15:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Astro Cats",
+    "campurl": "http://astrocatscamp.org",
+    "location": "Astro Cats",
+    "description": "Playful acro yoga jam, we’ll flip, balance, and giggle our way beginner welcome"
+  },
+  {
+    "id": "55063",
+    "title": "The Future of Wellness",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "10:00",
+        "end_time": "11:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Astro Cats",
+    "campurl": "http://astrocatscamp.org",
+    "location": "Astro Cats",
+    "description": "How electric training can heal your body."
+  },
+  {
+    "id": "55064",
+    "title": "Juggle Jam!",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "12:00",
+        "end_time": "13:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "12:00",
+        "end_time": "13:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Prismaticamp",
+    "campurl": "http://www.prismaticamp.org",
+    "location": "Prismaticamp",
+    "description": "Learn to juggle 3 balls, have fun, and celebrate every glorious drop!"
+  },
+  {
+    "id": "55065",
+    "title": "Stoner Yoga",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "13:45",
+        "end_time": "15:15"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Pink Heart",
+    "campurl": "https://pinkheartcamp.wordpress.com/",
+    "location": "Pink Heart",
+    "description": "Come stretch, maybe break a sweat. Good music guaranteed. Shared snacks welcome."
+  },
+  {
+    "id": "55066",
+    "title": "Whores Bath (Sound Bath + Self-care)",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "17:30",
+        "end_time": "18:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Barbie Death Village",
+    "campurl": "",
+    "location": "Barbie Death Village",
+    "description": "Bring a towel/mat for a deep soundbath experience + self-care wipedown"
+  },
+  {
+    "id": "55067",
+    "title": "Thru Hiker Meetup",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "11:00",
+        "end_time": "00:30"
+      }
+    ],
+    "type": "Food",
+    "camp": "Kentucky Fried Camp",
+    "campurl": "http://kentuckyfriedcamp.com",
+    "location": "Kentucky Fried Camp",
+    "description": "Hiked AT, TA, PCT? Bring stove or spork for \"guess the mystery hikerbox powder.\""
+  },
+  {
+    "id": "55069",
+    "title": "Divinatory Cards Reimagined",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "20:00",
+        "end_time": "21:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Vessels of Love",
+    "campurl": "http://www.vesselsoflove.net",
+    "location": "Vessels of Love",
+    "description": "Archetypes + cards = playful & powerful problem-solving together"
+  },
+  {
+    "id": "55070",
+    "title": "Whynaut Piña Coladas & Quesadillas",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "13:00",
+        "end_time": "15:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "13:00",
+        "end_time": "15:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "13:00",
+        "end_time": "15:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "13:00",
+        "end_time": "15:00"
+      }
+    ],
+    "type": "Food",
+    "camp": "Whynauts",
+    "campurl": "",
+    "location": "Whynauts",
+    "description": "Midday Oasis - when the playa gets spicy, we bring the chill. Cool off. Chow down."
+  },
+  {
+    "id": "55071",
+    "title": "Pamps and Champs",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "10:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "Duck Pond",
+    "campurl": "https://www.instagram.com/duck.pond",
+    "location": "Duck Pond",
+    "description": "Vibe to some music, sip on some bubbles, and soak up some spa vibes"
+  },
+  {
+    "id": "55072",
+    "title": "Mallardpalooza: 90s Rock at Noon",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "12:00",
+        "end_time": "14:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Duck Pond",
+    "campurl": "https://www.instagram.com/duck.pond",
+    "location": "Duck Pond",
+    "description": "90's Rock with DJ Ariel Ocean"
+  },
+  {
+    "id": "55073",
+    "title": "GlamCocks Present: Black Rock City High Homecoming",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "21:00",
+        "end_time": "00:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "GLAMCOCKS",
+    "campurl": "https://www.glamcocks.com/",
+    "location": "GLAMCOCKS",
+    "description": "HOMECOMING! Dust off your pom poms, toss your tassel, find your desert situationship, and meet us under the bleachers."
+  },
+  {
+    "id": "55074",
+    "title": "GlamCocks present: It's A Hard Drive Life!",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "21:00",
+        "end_time": "00:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "GLAMCOCKS",
+    "campurl": "https://www.glamcocks.com/",
+    "location": "GLAMCOCKS",
+    "description": "Little Orphan Annie has transcended Broadway, she’s now an AI-powered baddie with bionic curls and a chip for a heart."
+  },
+  {
+    "id": "55075",
+    "title": "Zenesis, part of the Queerborhood BlockParty",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "21:00",
+        "end_time": "00:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "GLAMCOCKS",
+    "campurl": "https://www.glamcocks.com/",
+    "location": "GLAMCOCKS",
+    "description": "Wander over to our dusty dancefloor for deep, downtempo beats to give you a sunset glow and good vibes inside and out."
+  },
+  {
+    "id": "55076",
+    "title": "Psychedelic Jazzercise",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "11:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Salon Soleil",
+    "campurl": "",
+    "location": "Salon Soleil",
+    "description": "Join Trippard Simmons on an interdimensional toad-licking aerobic dance journey!"
+  },
+  {
+    "id": "55077",
+    "title": "Tails and Tales",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "16:00",
+        "end_time": "17:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Karma Love Camp",
+    "campurl": "https://karmalove.camp",
+    "location": "Karma Love Camp",
+    "description": "Bring a book to share and leave with a book/spanking."
+  },
+  {
+    "id": "55078",
+    "title": "Breathwork",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "10:00",
+        "end_time": "11:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "10:00",
+        "end_time": "11:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Karma Love Camp",
+    "campurl": "https://karmalove.camp",
+    "location": "Karma Love Camp",
+    "description": "Deep mindfulness meditation."
+  },
+  {
+    "id": "55079",
+    "title": "Phoenix Hip Hop",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "09:00",
+        "end_time": "10:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Karma Love Camp",
+    "campurl": "https://karmalove.camp",
+    "location": "Karma Love Camp",
+    "description": "Empyreal Hip-Hop"
+  },
+  {
+    "id": "55080",
+    "title": "World Building Activity",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "10:00",
+        "end_time": "11:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Karma Love Camp",
+    "campurl": "https://karmalove.camp",
+    "location": "Karma Love Camp",
+    "description": "Participants are invited to imagine their temples and worlds..."
+  },
+  {
+    "id": "55081",
+    "title": "Sun Kissed Orange-ing",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "12:00",
+        "end_time": "13:00"
+      }
+    ],
+    "type": "Food",
+    "camp": "Karma Love Camp",
+    "campurl": "https://karmalove.camp",
+    "location": "Karma Love Camp",
+    "description": "Join us in peeling a perfectly chilled orange as we watch the sunrise."
+  },
+  {
+    "id": "55082",
+    "title": "Liv Love Yoga",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "09:00",
+        "end_time": "10:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Karma Love Camp",
+    "campurl": "https://karmalove.camp",
+    "location": "Karma Love Camp",
+    "description": "Mindful Movement to embody, awaken, and connect to the here and now."
+  },
+  {
+    "id": "55083",
+    "title": "Vinyasa for Conscious Creation",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "11:00",
+        "end_time": "12:15"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "PALINKA LOUNGE",
+    "campurl": "https://www.facebook.com/PalinkaLounge/",
+    "location": "PALINKA LOUNGE",
+    "description": "Let's ground us in the now-where all of our potential lives to explore how each moment is a seed we plant for the future"
+  },
+  {
+    "id": "55084",
+    "title": "Academics Anonymous Support Circle",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "14:00",
+        "end_time": "15:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "LOBE",
+    "campurl": "http://campus-callosum.org/",
+    "location": "LOBE",
+    "description": "Anxious students and burnt out professors; Process your academic angst with us!"
+  },
+  {
+    "id": "55085",
+    "title": "Academic Burn(out) Journaling",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "15:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "LOBE",
+    "campurl": "http://campus-callosum.org/",
+    "location": "LOBE",
+    "description": "Publish and release your research frustrations in our burnable academic journal!"
+  },
+  {
+    "id": "55086",
+    "title": "Viking Bar! - Open Bar",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "12:00",
+        "end_time": "16:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "12:00",
+        "end_time": "16:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "12:00",
+        "end_time": "16:00"
+      },
+      {
+        "date": "08/28/2025",
+        "start_time": "12:00",
+        "end_time": "16:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "12:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "Viking Bar!",
+    "campurl": "",
+    "location": "Viking Bar!",
+    "description": "Drink top shelf craft beer at Black Rock City's favorite bar from the north! Energy drinks and non-alc available too."
+  },
+  {
+    "id": "55087",
+    "title": "Vainforest Cafe - Caffeine and Clay!",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "09:00",
+        "end_time": "11:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "Viking Bar!",
+    "campurl": "",
+    "location": "Viking Bar!",
+    "description": "We'll be serving warm cups of ambition (coffee/tea) in hand made pottery mugs which are our gift to you!"
+  },
+  {
+    "id": "55088",
+    "title": "Craft Beer Bottle Share",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "15:00",
+        "end_time": "16:00"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "Viking Bar!",
+    "campurl": "",
+    "location": "Viking Bar!",
+    "description": "Attention craft beer aficionados! Bring a bottle to share, and try a few dozen more. Let's geek out on some epic brews!"
+  },
+  {
+    "id": "55089",
+    "title": "Texas Tap Takeover",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "11:30",
+        "end_time": "15:30"
+      }
+    ],
+    "type": "Beverages",
+    "camp": "Viking Bar!",
+    "campurl": "",
+    "location": "Viking Bar!",
+    "description": "Skål Y'all! Our Texan members have taken over and are pouring from an all-Texas selection of kegs."
+  },
+  {
+    "id": "55090",
+    "title": "Utangard - Drain The Kegs Party!",
+    "times": [
+      {
+        "date": "08/30/2025",
+        "start_time": "12:00",
+        "end_time": "17:00"
+      }
+    ],
+    "type": "Music/Party",
+    "camp": "Viking Bar!",
+    "campurl": "",
+    "location": "Viking Bar!",
+    "description": "Your friendly neighborhood vikings brought too much craft beer again. One last throw down to Drain. These. Kegs. Skål!"
+  },
+  {
+    "id": "55091",
+    "title": "Valhalla Happy Hour",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "14:00",
+        "end_time": "15:00"
+      },
+      {
+        "date": "08/26/2025",
+        "start_time": "14:00",
+        "end_time": "15:00"
+      },
+      {
+        "date": "08/27/2025",
+        "start_time": "14:00",
+        "end_time": "15:00"
+      },
+      {
+        "date": "08/29/2025",
+        "start_time": "14:00",
+        "end_time": "15:00"
+      }
+    ],
+    "type": "Food",
+    "camp": "Viking Bar!",
+    "campurl": "",
+    "location": "Viking Bar!",
+    "description": "Light snacks served. Chips, popcorn, gummies. Come get some sodium and sugar in you. We also have great beer ;)"
+  },
+  {
+    "id": "55092",
+    "title": "Connect With Your Inner Artist",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "11:00",
+        "end_time": "12:00"
+      }
+    ],
+    "type": "Arts & Crafts",
+    "camp": "Karma Love Camp",
+    "campurl": "https://karmalove.camp",
+    "location": "Karma Love Camp",
+    "description": "Do you ever desire to create more? Do you struggle with creative blocks? Come to KLC and connect with your inner artist!"
+  },
+  {
+    "id": "55093",
+    "title": "Surviving an Unplanned Landing",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "12:00",
+        "end_time": "12:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "",
+    "campurl": "",
+    "location": "Airport",
+    "description": "Wilderness medicine expert offers survival advice for pilots"
+  },
+  {
+    "id": "55094",
+    "title": "Making Effective Use of ATC",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "13:00",
+        "end_time": "13:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "",
+    "campurl": "",
+    "location": "Airport",
+    "description": "Controller from Oakland Center offers tips for pilots flying into 88NV"
+  },
+  {
+    "id": "55095",
+    "title": "So You Want to Be an Airline Pilot?",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "12:00",
+        "end_time": "12:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "",
+    "campurl": "",
+    "location": "Airport",
+    "description": "Professional airline pilot offers career advice for those aspiring to be commercial pilots"
+  },
+  {
+    "id": "55096",
+    "title": "Flying for Medevac",
+    "times": [
+      {
+        "date": "08/26/2025",
+        "start_time": "13:00",
+        "end_time": "13:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "",
+    "campurl": "",
+    "location": "Airport",
+    "description": "Medevac pilot shares some of his experiences flying wounded and sick individuals to medical care"
+  },
+  {
+    "id": "55097",
+    "title": "Fighting Fire with Fire",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "12:00",
+        "end_time": "12:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "",
+    "campurl": "",
+    "location": "Airport",
+    "description": "Former Air Force pilot and current firefighting pilot shares experiences dealing with foes human and natural"
+  },
+  {
+    "id": "55098",
+    "title": "88NV Over the Years",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "13:00",
+        "end_time": "13:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "",
+    "campurl": "",
+    "location": "Airport",
+    "description": "Long-time 88NV denizen DrunkNPilot shares stories and photos from years past at the Black Rock City Municipal Airport"
+  },
+  {
+    "id": "55099",
+    "title": "What's New in Aviation Medicine",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "12:00",
+        "end_time": "12:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "",
+    "campurl": "",
+    "location": "Airport",
+    "description": "Former flight surgeon and pilot updates attendees on advances in medical technology that will impact pilots"
+  },
+  {
+    "id": "55100",
+    "title": "Adding Tech to Your Cockpit",
+    "times": [
+      {
+        "date": "08/28/2025",
+        "start_time": "13:00",
+        "end_time": "13:45"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "",
+    "campurl": "",
+    "location": "Airport",
+    "description": "Private pilot and technology expert offers details on upgrading your plane with A/V and Internet access"
+  },
+  {
+    "id": "55101",
+    "title": "Root, Align and Expand (RAE)",
+    "times": [
+      {
+        "date": "08/29/2025",
+        "start_time": "12:00",
+        "end_time": "13:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Cold Yogis",
+    "campurl": "http://www.coldyogis.org/",
+    "location": "Cold Yogis",
+    "description": "A progression & mindful movement class accompanied by music to foster deep mind-body connection and realign"
+  },
+  {
+    "id": "55102",
+    "title": "From Scarcity to Abundance",
+    "times": [
+      {
+        "date": "08/25/2025",
+        "start_time": "10:00",
+        "end_time": "11:30"
+      }
+    ],
+    "type": "Class/Workshop",
+    "camp": "Cold Yogis",
+    "campurl": "http://www.coldyogis.org/",
+    "location": "Cold Yogis",
+    "description": "Transform the never enough mindset into a felt sense of belonging and abundance"
+  },
+  {
+    "id": "55103",
+    "title": "Leftovers lunchtime pub quiz",
+    "times": [
+      {
+        "date": "08/27/2025",
+        "start_time": "13:00",
+        "end_time": "14:00"
+      }
+    ],
+    "type": "Other",
+    "camp": "Pepperland",
+    "campurl": "https://www.camppepperland.com/",
+    "location": "Pepperland",
+    "description": "Five rounds, art, music, movies, celebs and of course the Beatles. Un-googleable"
   }
 ]

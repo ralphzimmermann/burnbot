@@ -22,9 +22,12 @@ Users can mark events as favorites. Favorites are stored per user on the backend
 - Tabs: `Search`, `Favorites`, `Week View` (`website/frontend/src/components/Tabs.jsx`).
 - `Favorites` page (`/favorites`) lists saved events.
 - `Week View` (`/week`) organizes favorites by festival day/time.
-  - Clicking a day label opens a printable view in a new tab.
-  - Print route: `/print/day/:date` (date format `MM/DD/YYYY`).
-  - The print page lists all favorite events for that date, sorted by start time, including full descriptions and basic metadata.
+  - Type filter: a dropdown to filter by event `type` with emoji labels.
+    - Options: "All Events ✨" (default), "Arts & Crafts 🎨", "Beverages 🍹", "Class/Workshop 🧑‍🏫", "Food 🍽️", "Kids Activities 🎈", "Mature Audiences 🔞", "Music/Party 🪩", "Other ❓".
+    - The emoji is shown before each event title in the list and in print.
+  - Clicking a day label opens a printable view in a new tab. The current type filter is passed through.
+  - Print route: `/print/day/:date` (date format `MM/DD/YYYY`). Optional query: `?type=<Type Name>`; omit or `All Events` to show all.
+  - The print page lists all favorite events for that date, sorted by start time, honoring the `type` filter.
 
 ## Auto-refresh behavior
 - To keep multiple browsers in sync, both `Favorites` and `Week View` call `refreshFavorites()` on mount. When switching tabs/routes to these pages, the latest server state is shown.
