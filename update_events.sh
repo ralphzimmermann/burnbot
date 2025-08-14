@@ -3,10 +3,12 @@
 # Update events and generate embeddings for BM EventGuide.
 #
 # Steps:
-# 1) Activate data-collector venv and run collect_events.py
-#    → writes JSON to website/backend/data/events.json
-# 2) Activate backend venv and run `python -m app.services`
-#    → reads events.json and writes embeddings to data/embeddings.npy
+# 1) Activate data-collector venv and collect Camps and Art first
+#    → writes camps.json and arts.json to website/backend/data/
+# 2) Collect Events (with camp enrichment)
+#    → writes events.json to website/backend/data/
+# 3) Activate backend venv and run `python -m app.services`
+#    → reads events.json and writes embeddings to website/backend/data/embeddings.npy
 #
 # Requirements:
 # - data-collector requirements installed (handled by this script if venv needs init)
@@ -26,6 +28,8 @@ BACKEND_DIR="$REPO_ROOT/website/backend"
 BACKEND_DATA_DIR="$BACKEND_DIR/data"
 EVENTS_JSON="$BACKEND_DATA_DIR/events.json"
 EMBEDDINGS_NPY="$BACKEND_DATA_DIR/embeddings.npy"
+CAMPS_JSON="$BACKEND_DATA_DIR/camps.json"
+ARTS_JSON="$BACKEND_DATA_DIR/arts.json"
 
 ensure_dir() {
   mkdir -p "$1"
@@ -94,7 +98,19 @@ run_collector() {
   ensure_dir "$BACKEND_DATA_DIR"
   echo "→ Collecting events → $EVENTS_JSON"
   # Forward any arguments provided to this script to the collector (e.g., --max-events 100)
-  python3 "$COLLECTOR_DIR/collect_events.py" --output "$EVENTS_JSON" "$@"
+  python3 "$COLLECTOR_DIR/collect_events.py" --output "$EVENTS_JSON" --camps "$CAMPS_JSON" "$@"
+}
+
+run_camps_collector() {
+  ensure_dir "$BACKEND_DATA_DIR"
+  echo "→ Collecting camps → $CAMPS_JSON"
+  python3 "$COLLECTOR_DIR/collect_camps.py" --output "$CAMPS_JSON"
+}
+
+run_arts_collector() {
+  ensure_dir "$BACKEND_DATA_DIR"
+  echo "→ Collecting art → $ARTS_JSON"
+  python3 "$COLLECTOR_DIR/collect_arts.py" --output "$ARTS_JSON"
 }
 
 run_embeddings() {
@@ -120,18 +136,23 @@ run_embeddings() {
 main() {
   echo "=== Updating events and embeddings ==="
 
-  # 1) Collect events
+  # 1) Collect Camps and Art first so events can be enriched
   activate_collector_venv
+  run_camps_collector
+  run_arts_collector
+  # 2) Collect Events (enriched using camps.json)
   run_collector "$@"
   deactivate || true
 
-  # 2) Generate embeddings
+  # 3) Generate embeddings
   activate_backend_venv
   run_embeddings
   deactivate || true
 
   echo "✓ Done. Updated:"
   echo "  - Events:     $EVENTS_JSON"
+  echo "  - Camps:      $CAMPS_JSON"
+  echo "  - Art:        $ARTS_JSON"
   echo "  - Embeddings: $EMBEDDINGS_NPY"
 }
 
