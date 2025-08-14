@@ -23,6 +23,8 @@ class Event(BaseModel):
     camp: str
     campurl: Optional[str] = ""
     location: str
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
     description: str
 
 

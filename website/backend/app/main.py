@@ -10,7 +10,8 @@ from starlette.middleware.sessions import SessionMiddleware
 from app.api.recommendations import router as recommendations_router
 from app.api.auth import router as auth_router
 from app.api.favorites import router as favorites_router
-from app.db import init_db
+from app.db import init_db, SessionLocal
+from app.services.favorites_sync import sync_favorites_with_events
 
 
 def create_app() -> FastAPI:
@@ -49,6 +50,18 @@ def create_app() -> FastAPI:
 
     # Initialize database (creates tables if needed)
     init_db()
+
+    # On startup, sync favorites with latest events.json so mobile clients
+    # receive up-to-date fields (including coordinates)
+    @app.on_event("startup")
+    async def _sync_favorites_on_startup() -> None:
+        base_dir = Path(__file__).resolve().parents[2]  # website/
+        data_dir = base_dir / "backend" / "data"
+        db = SessionLocal()
+        try:
+            sync_favorites_with_events(db, data_dir)
+        finally:
+            db.close()
 
     @app.get("/health")
     async def health() -> dict:
