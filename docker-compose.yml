@@ -6,16 +6,26 @@ services:
       dockerfile: Dockerfile
     image: bm-eventguide:latest
     ports:
-      - "8000:8000"
+      - "80:80"
+      - "443:443"
     env_file:
       - ./website/backend/.env
     environment:
       - SQLITE_DB_PATH=/data/app.db
       - SECRET_KEY=${SECRET_KEY:-dev-insecure-secret}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID:-}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:-}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-us-east-1}
     restart: unless-stopped
     volumes:
       - eventguide-db:/data
+      - letsencrypt:/etc/letsencrypt
+      - letsencrypt-logs:/var/log/letsencrypt
 
 volumes:
   eventguide-db:
+  letsencrypt:
+    name: eventguide-letsencrypt
+  letsencrypt-logs:
+    name: eventguide-letsencrypt-logs
 

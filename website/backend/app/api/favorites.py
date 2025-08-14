@@ -17,6 +17,8 @@ class FavoriteEvent(BaseModel):
     camp: str = ""
     campurl: str | None = None
     location: str = ""
+    latitude: float | None = None
+    longitude: float | None = None
     description: str = ""
     times: list[dict] = []
 

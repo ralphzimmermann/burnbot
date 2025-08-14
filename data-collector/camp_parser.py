@@ -101,7 +101,7 @@ def _find_text_after_label(soup: BeautifulSoup, label_text: str) -> str:
         if collected:
             return _clip_at_next_label(" ".join(collected).strip())
 
-    # Strategy 2: Find an element that contains the label and then
+    # Strategy 2: Find an element that contains the label at the start and then
     # look for a following sibling element's text
     container = soup.find(lambda tag: tag.get_text(strip=True).lower().startswith(label_text.lower()))
     if container:
@@ -116,6 +116,27 @@ def _find_text_after_label(soup: BeautifulSoup, label_text: str) -> str:
         next_sib = container.find_next_sibling()
         if next_sib:
             return _clip_at_next_label(next_sib.get_text(" ", strip=True))
+
+    # Strategy 3: Permissive in-line label extraction.
+    # Find the first occurrence of the label anywhere in the surrounding text,
+    # then take text after it up to the next known label or end of string.
+    any_label_regex = re.compile(rf"{re.escape(label_text)}", re.IGNORECASE)
+    next_label_regex = re.compile(r"\b(?:Website|Location|Description|Camp Events)\s*:", re.IGNORECASE)
+    for node in soup.find_all(string=any_label_regex):
+        parent = node.parent
+        context_text = parent.get_text(" ", strip=True) if parent else str(node)
+        # Position right after the matched label
+        m = any_label_regex.search(context_text)
+        if not m:
+            continue
+        start = m.end()
+        tail = context_text[start:].strip()
+        # Clip at next label if present
+        nl = next_label_regex.search(tail)
+        value = tail[: nl.start()].strip() if nl else tail
+        value = _clip_at_next_label(value)
+        if value:
+            return value
 
     return ""
 

@@ -19,15 +19,15 @@ uvicorn app.main:app --reload --port 8000
 curl http://localhost:8000/health
 ```
 
-### Docker (serves API and built frontend)
+### Docker (serves API and built frontend via Nginx on 80/443)
 
 ```bash
 cd <repo-root>
 docker compose up -d
-open http://localhost:8000
+open http://localhost
 ```
 
-See `docs/DOCKER.md` for details (env vars, how it bundles frontend, etc.).
+See `docs/DOCKER.md` for details (env vars, how it bundles frontend, etc.). For HTTPS and Let's Encrypt DNS validation setup, see `docs/README.md`.
 
 ## Setup
 
